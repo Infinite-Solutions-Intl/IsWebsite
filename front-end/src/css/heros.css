@@ -1,0 +1,145 @@
+.heros{
+    display: flex;
+    background-color: #1B3987;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding-left: 100px;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+
+.heros .slide-text .title{
+    color: white;
+}  
+
+.slide-text {
+    width: 50%;
+}
+
+.slide-img{
+    display:flex;
+    overflow: hidden;
+    gap:10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-img div{
+    display: block;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+
+
+
+/* configuration 1 */
+
+.config1-div1{
+
+    min-width: 257px;
+    height: 300px;
+    background-image: url('../img/slide1.png');
+    background-size: cover;
+    order: 1;
+
+}
+
+.config1-div2{
+
+    min-width: 200px;
+    height: 275px;
+
+    background-image: url('../img/slide2.png');
+    background-size: cover;
+    order: 2;
+
+}
+
+.config1-div3{
+
+    min-width: 175px;
+    height: 250px;
+    background-image: url('../img/slide3.png');
+    background-size: cover;
+    order: 3;
+
+}
+
+
+/* configuration2 */
+
+
+.config2-div1{
+    min-width: 175px;
+    height: 250px;
+
+
+    background-image: url('../img/slide1.png');
+    background-size: cover;
+    order: 3;
+
+}
+
+.config2-div2{
+    min-width: 257px;
+    height: 300px;
+
+    background-image: url('../img/slide2.png');
+    background-size: cover;
+    order: 1;
+
+}
+
+.config3-div3{
+
+    min-width: 200px;
+    height: 275px;
+
+    background-image: url('../img/slide3.png');
+    background-size: cover;
+    order: 2;
+
+}
+
+
+/* configuration3 */
+
+
+.config3-div1{
+    min-width: 200px;
+    height: 275px;
+
+    background-image: url('../img/slide1.png');
+    background-size: cover;
+    order: 3;
+
+}
+
+.config3-div2{
+    min-width: 175px;
+    height: 250px;
+
+    background-image: url('../img/slide2.png');
+    background-size: cover;
+    order: 2;
+
+}
+
+.config3-div3{
+    min-width: 257px;
+    height: 300px;
+
+    background-image: url('../img/slide3.png');
+    background-size: cover;
+    order:1 ;
+
+}
+
+
+
+.slide-text-hidden {
+    display: none;
+}
