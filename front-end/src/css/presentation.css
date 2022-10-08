@@ -1,0 +1,159 @@
+.presentation{
+    background-color: #F5F5F5;
+    padding:  100px 100px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    position: relative;
+    z-index:-2
+
+
+}
+
+.text-presentation{
+    width: 45%;
+    margin: 0;
+    padding: 0;
+}
+
+.text-presentation h1{
+    margin: 0;
+}
+
+.text-presentation p{
+    margin: 50px 0;
+}
+.images-presentation{
+    width: 45%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 4%;
+    
+    
+}
+
+.img-presentation1{
+    width:48%;
+    height: 90%;
+    background-color: bisque;
+    border-radius: 5px;
+    background-image: url('../img/presentation1.png');
+    background-size:cover ;
+}
+
+.img-presentation2{
+    width:48%;
+    height: 48%;
+    background-color: bisque;
+    border-radius: 5px;
+    background-image: url('../img/presentation2.png');
+    background-size:cover ;
+}
+.img-presentation3{
+    width:48%;
+    height: 48%;
+    background-color: bisque;
+    border-radius: 5px;
+    background-image: url('../img/presentation3.png');
+    background-size:cover ;
+}
+
+@media screen and (max-width:992px) {
+   .presentation{
+    padding:  100px 40px ;
+   }
+   .images-presentation{
+       width: 50%;
+   }
+}
+
+@media screen and (max-width:768px){
+    .presentation{
+        flex-wrap: wrap;
+    }
+    .text-presentation{
+        width: 100%;
+    }
+
+    .images-presentation{
+        margin-top: 50px;
+        width: 100%;
+        flex-flow: row wrap;
+        justify-content: center;
+
+    }
+
+    .img-presentation1{
+        height: 200px;
+    }
+
+    .img-presentation2{
+        height: 200px;
+    }
+    .img-presentation3{
+        width: 60%;
+        height: 200px;
+    }
+
+}
+
+@media screen and (max-width:568px) {
+    .img-presentation1{
+        width: 100%;
+        height: 200px;
+    }
+
+    .img-presentation2{
+        width: 48%;
+        height: 200px;
+    }
+
+    .img-presentation3{
+        width: 48%;
+        height: 200px;
+    }
+    
+}
+
+.vector1{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #1B3987;
+    background-blend-mode: multiply;
+    overflow: hidden;
+    opacity:0.3 ;
+    left: -75px;
+}
+
+.vector2{
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    background-color: #1B3987;
+    background-blend-mode: multiply;
+    overflow: hidden;
+    opacity:0.3 ;
+    left: -75px;
+    bottom: -150px;
+}
+
+.substract{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: absolute;
+    top:-150px;
+    right: 0;
+    z-index: -1;
+}
+
+.substract svg{
+    margin: 0;
+    padding: 0; 
+    width: 100%;
+}

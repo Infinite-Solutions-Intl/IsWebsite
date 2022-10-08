@@ -1,43 +1,128 @@
-import React, { useState } from 'react'
+import React, { useState , useLayoutEffect, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../../../component/buttons'
 export default function Heros() {
 
-    const [config , setConfig]= useState(1);
-
-    console.log(document.querySelectorAll(".title"))
-
-    if(config==1){
-        const h1 =document.querySelectorAll(".title")
 
 
-        const p =document.querySelectorAll(".paragraphe")
-  
+    let  [config , setConfig]= useState(1);
 
 
+        useEffect(()=>{
+            const  timer=setInterval(()=>{
+                
+                if (config == 1) {
+                    setConfig(2)
+                    
+                } else if(config == 2) {
+                    setConfig(3)
+                    
+                }
+                else{
+                    setConfig(1)
+                }
 
-    }
-    if(config==2){
-        
-    }
-    if(config==3){
-        
-    }
+             
+            } ,5000)
+
+            return ()=>{
+                clearInterval(timer)
+            }
+    
+        } , [config])
+            
+    
+        useLayoutEffect(()=>{
+            const titles = document.querySelectorAll('.title') 
+            const paragraphes =document.querySelectorAll('.paragraphe')
+            const images = document.querySelector('.slide-img')
+            const progress =document.querySelector('.slide-progress span')
+
+            if(config ==1){
+                titles[0].classList.remove('slide-text-hidden')
+                titles[2].classList.add('slide-text-hidden')
+                titles[1].classList.add('slide-text-hidden')
+               
+
+                paragraphes[0].classList.remove('slide-text-hidden')
+                paragraphes[2].classList.add('slide-text-hidden')
+                paragraphes[1].classList.add('slide-text-hidden')
+
+                images.classList.add('config1')
+                images.classList.remove('config2' , 'config3')
+
+                progress.classList.add('progress-1')
+                progress.classList.remove('progress-2' , 'progress-3')
+
+
+            
+                
+            }
+
+            else if(config ==2){
+                titles[1].classList.remove('slide-text-hidden')
+                titles[0].classList.add('slide-text-hidden')
+                titles[2].classList.add('slide-text-hidden')
+
+                paragraphes[1].classList.remove('slide-text-hidden')
+                paragraphes[0].classList.add('slide-text-hidden')
+                paragraphes[2].classList.add('slide-text-hidden')
+
+                images.classList.add('config2')
+                images.classList.remove('config1' , 'config3')
+
+                progress.classList.add('progress-2')
+                progress.classList.remove('progress-1' , 'progress-3')
+
+              
+            }
+
+            else{
+
+                titles[2].classList.remove('slide-text-hidden')
+                titles[0].classList.add('slide-text-hidden')
+                titles[1].classList.add('slide-text-hidden')
+
+                paragraphes[2].classList.remove('slide-text-hidden')
+                paragraphes[0].classList.add('slide-text-hidden')
+                paragraphes[1].classList.add('slide-text-hidden')
+               
+                images.classList.add('config3' , )
+                images.classList.remove('config1' , 'config2')
+
+                progress.classList.add('progress-3')
+                progress.classList.remove('progress-1' , 'progress-2')
+
+                
+
+            }
+            titles[0].classList.add('green')
+
+            console.log(images)
+            
+
+       
+         } , [config])
+
+
   return (
+      <>
     <div className="heros">
         <div className="slide-text">
-            <h1  className="title ">Nous Sommes Une <br></br>Startup Prometteuse </h1>
+            <h1  className="title "> 1 Nous Sommes Une Startup Prometteuse </h1>
             <p className = "paragraphe">Besoin d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
           
-            <h1 className="title " >Nous Sommes Une Startup<br></br> Prometteuse </h1>
-            <p className = "paragraphe " >Besoin d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
+            <h1 className="title " >2 Nous Sommes Une Startup Prometteuse </h1>
+            <p className = "paragraphe " >Besoincvcnndfhhffdhfhf d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
           
-            <h1 className="title " >Nous Sommes Une <br></br>Startup Prometteuse </h1>
-            <p className = "paragraphe " >Besoin d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
+            <h1 className="title " >3 Nous Sommes Une Startup Prometteuse </h1>
+            <p className = "paragraphe " >Bcvcvcesoin d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
            
             <Button text={"Nous contacter"}></Button>
-            <Link>Nos projets</Link>
-            <div className="slide-progress"></div>
+            <Link className='contact-link'>Nos projets</Link>
+            <div className="slide-progress">
+            <span className ='progress-1'></span>
+            </div>
        
         </div>
 
@@ -48,7 +133,11 @@ export default function Heros() {
 
         </div>
 
-        <span className="slide-progress"></span>
+       
+
     </div>
+    </>
+
+    
   )
 }
