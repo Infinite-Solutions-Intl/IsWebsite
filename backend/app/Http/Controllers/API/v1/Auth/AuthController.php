@@ -42,6 +42,7 @@ class AuthController extends Controller
             [
                 'status' => true,
                 'access_token' => $token,
+                'token_type' => 'Bearer',
                 'user' => $user
             ],200
         );
@@ -50,33 +51,40 @@ class AuthController extends Controller
 
     public function login(Request $request){
        
-        $validator = Validator::make($request->all(),[
-            'email'=>'required|email',
-            'password' => 'required|min:8',
-        ]);   
+        // $validator = Validator::make($request->all(),[
+        //     'email'=>'required|email',
+        //     'password' => 'required|min:8',
+        // ]);   
+
+        if (!Auth::attempt($request->only('email', 'password')))
+        {
+            return response()->json([
+                'message' => 'Unauthorized'
+            ], 401);
+        }
  
-        if ($validator->fails()) {
-            return response()->json([
-                    'status'=>false,
-                    'message' => $validator->errors()
-                ],422
-            );
-        }
+        // if ($validator->fails()) {
+        //     return response()->json([
+        //             'status'=>false,
+        //             'message' => $validator->errors()
+        //         ],422
+        //     );
+        // }
 
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->firstOrFail();
 
-        if (!$user || $user->email!=$request->email) {
-            return response()->json([
-                'status' => false,
-                'message' => "L\'email ou le mot de passe est incorrecte",
-            ],401);
-        }
-        if (!Hash::check($request->password, $user->password)) {
-            return response()->json([
-                'status' => false,
-                'message' => "L\'email ou le mot de passe est incorrect",
-            ],401);
-        }
+        // if (!$user || $user->email!=$request->email) {
+        //     return response()->json([
+        //         'status' => false,
+        //         'message' => "L\'email ou le mot de passe est incorrecte",
+        //     ],401);
+        // }
+        // if (!Hash::check($request->password, $user->password)) {
+        //     return response()->json([
+        //         'status' => false,
+        //         'message' => "L\'email ou le mot de passe est incorrect",
+        //     ],401);
+        // }
 
         $token = $user->createToken('isolutions')->plainTextToken;
 
@@ -89,12 +97,10 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request){
-        // Auth::logout();
- 
-        // $request->session()->invalidate();
-     
-        // $request->session()->regenerateToken();
-     
-        // return 'redirect()';
+       
+        if ($request->user()) { 
+            $request->user()->tokens()->delete();
+        }
+        return response()->json(['message' => 'You have successfully logged out']);
     }
 }
