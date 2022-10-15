@@ -6,10 +6,10 @@
     background-color: #1B3987;
     flex-wrap: nowrap;
     overflow: hidden;
-    padding: 200px 0 0 100px;
+    padding: 100px 0 100px 100px;
     justify-content: space-between;
     align-items: top;
-    height: 50vh;
+
 
 
    
@@ -22,16 +22,15 @@
     transition: all 2s !important;
 }  
 
-.slide-text {
+.heros .slide-text {
     width: 45%;
-    height: 400px;
     margin-right: 50px;
     color: #fff;
-    position: relative;
+  
 
 }
 
-.slide-img{
+.heros .slide-img{
     display:flex;
     overflow: hidden;
     gap:10px;
@@ -42,7 +41,7 @@
    
 }
 
-.slide-img div{
+.heros .slide-img div{
     display: block;
     border-radius: 5px;
     background-color: antiquewhite;
@@ -205,31 +204,30 @@
 
 @media screen and (max-width:992px){
     .heros{
-        padding-top: 100px;
-        padding-left: 30px;
+        padding: 100px 0 100px 30px;
     }
 }
 
 @media screen and (max-width:576px) {
 
     .heros{
-        padding :50px 40px 0 40px;
+        padding :50px 40px;
        
     }
     
 
-    .slide-text{
+    .heros .slide-text{
         width: 100%;
         margin: 0;
 
         text-align: center;
     }
 
-    .slide-progress{
+    .heros .slide-progress{
         display: none;
     }
 
-    .slide-img{
+    .heros .slide-img{
         display: none;
     }
     

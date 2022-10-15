@@ -52,10 +52,12 @@
     }
     .mobile-tiret1{
         transform: rotate(45deg);
+        transform-origin: 10px 2px ;
     }
 
     .mobile-tiret2{
         transform: rotate(-45deg);
+        transform-origin: 10px 0px ;
     }
     
 }

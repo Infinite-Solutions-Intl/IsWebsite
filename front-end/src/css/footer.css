@@ -1,0 +1,40 @@
+.footer{
+    padding: 100px;
+    background-color: #FDFDFD;
+    display: flex;
+    flex-wrap:wrap ;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.footer div{
+max-width: 250px;
+}
+
+.footer div h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29.3px;
+    line-height: 44px;
+    /* identical to box height */
+
+
+    /* green/600 */
+
+    color: #057A55;
+}
+.footer-presentation img{
+
+    width: 100px;
+
+} 
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+.footer ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}

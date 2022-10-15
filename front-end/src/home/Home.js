@@ -5,7 +5,16 @@ import '../css/navbar.css'
 import '../css/heros.css'
 import '../css/body.css'
 import '../css/presentation.css'
+import '../css/services.css'
+import '../css/component.css'
+import  '../css/technologies.css'
+import  '../css/travaux.css'
+import  '../css/formation.css'
+import '../css/newsletter.css'
+import '../css/footer.css'
+
 import Body from './sections/Boody/Body'
+import Footer from './sections/footer/footer'
 
 
 export default function Home() {
@@ -13,6 +22,7 @@ export default function Home() {
     <div className = 'container'>
         <Header></Header>
         <Body></Body>
+        <Footer></Footer>
     </div>
   )
 }

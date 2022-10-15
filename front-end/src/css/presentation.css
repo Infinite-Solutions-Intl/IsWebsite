@@ -5,7 +5,8 @@
     justify-content: space-between;
     align-items: top;
     position: relative;
-    z-index:-2
+    z-index: -2;
+    
 
 
 }
@@ -62,62 +63,8 @@
     background-size:cover ;
 }
 
-@media screen and (max-width:992px) {
-   .presentation{
-    padding:  100px 40px ;
-   }
-   .images-presentation{
-       width: 50%;
-   }
-}
 
-@media screen and (max-width:768px){
-    .presentation{
-        flex-wrap: wrap;
-    }
-    .text-presentation{
-        width: 100%;
-    }
 
-    .images-presentation{
-        margin-top: 50px;
-        width: 100%;
-        flex-flow: row wrap;
-        justify-content: center;
-
-    }
-
-    .img-presentation1{
-        height: 200px;
-    }
-
-    .img-presentation2{
-        height: 200px;
-    }
-    .img-presentation3{
-        width: 60%;
-        height: 200px;
-    }
-
-}
-
-@media screen and (max-width:568px) {
-    .img-presentation1{
-        width: 100%;
-        height: 200px;
-    }
-
-    .img-presentation2{
-        width: 48%;
-        height: 200px;
-    }
-
-    .img-presentation3{
-        width: 48%;
-        height: 200px;
-    }
-    
-}
 
 .vector1{
     position: absolute;
@@ -140,6 +87,7 @@
     opacity:0.3 ;
     left: -75px;
     bottom: -150px;
+ 
 }
 
 .substract{
@@ -156,4 +104,66 @@
     margin: 0;
     padding: 0; 
     width: 100%;
+}
+
+
+@media screen and (max-width:992px) {
+
+    .vector1 , .vector2 {
+        display: none;
+    }
+    .presentation{
+     padding:  100px 40px ;
+    }
+    .images-presentation{
+        width: 50%;
+    }
+ }
+ 
+ @media screen and (max-width:768px){
+     .presentation{
+         flex-wrap: wrap;
+     }
+     .text-presentation{
+         width: 100%;
+     }
+ 
+     .images-presentation{
+         margin-top: 50px;
+         width: 100%;
+         flex-flow: row wrap;
+         justify-content: center;
+ 
+     }
+ 
+     .img-presentation1{
+         height: 200px;
+     }
+ 
+     .img-presentation2{
+         height: 200px;
+     }
+     .img-presentation3{
+         width: 60%;
+         height: 200px;
+     }
+ 
+ }
+
+@media screen and (max-width:568px) {
+    .img-presentation1{
+        width: 100%;
+        height: 200px;
+    }
+
+    .img-presentation2{
+        width: 48%;
+        height: 200px;
+    }
+
+    .img-presentation3{
+        width: 48%;
+        height: 200px;
+    }
+    
 }
