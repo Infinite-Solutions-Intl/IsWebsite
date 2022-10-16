@@ -48,27 +48,27 @@ Route::prefix('v1')->group(function(){
 
 Route::middleware('auth:sanctum')->prefix('v1')->group(function (){
     Route::post('date', [\App\Http\Controllers\API\v1\DateController::class, 'store']);
-    Route::patch('date/{date}', [\App\Http\Controllers\API\v1\DateController::class, 'update']);
+    Route::match(['put', 'patch'] ,'date/{date}', [\App\Http\Controllers\API\v1\DateController::class, 'update']);
     Route::delete('date/{date}', [\App\Http\Controllers\API\v1\DateController::class, 'destroy']);
 
     Route::post('formation', [\App\Http\Controllers\API\v1\FormationController::class, 'store']);
-    Route::patch('formation/{formation}', [\App\Http\Controllers\API\v1\FormationController::class, 'update']);
+    Route::match(['put', 'patch'] ,'formation/{formation}', [\App\Http\Controllers\API\v1\FormationController::class, 'update']);
     Route::delete('formation/{formation}', [\App\Http\Controllers\API\v1\FormationController::class, 'destroy']);
 
     Route::post('pricing', [\App\Http\Controllers\API\v1\PricingController::class, 'store']);
-    Route::patch('pricing/{pricing}', [\App\Http\Controllers\API\v1\PricingController::class, 'update']);
+    Route::match(['put', 'patch'] ,'pricing/{pricing}', [\App\Http\Controllers\API\v1\PricingController::class, 'update']);
     Route::delete('pricing/{pricing}', [\App\Http\Controllers\API\v1\PricingController::class, 'destroy']);
 
     Route::post('projet', [\App\Http\Controllers\API\v1\ProjetController::class, 'store']);
-    Route::patch('projet/{projet}', [\App\Http\Controllers\API\v1\ProjetController::class, 'update']);
+    Route::match(['put', 'patch'] ,'projet/{projet}', [\App\Http\Controllers\API\v1\ProjetController::class, 'update']);
     Route::delete('projet/{projet}', [\App\Http\Controllers\API\v1\ProjetController::class, 'destroy']);
 
     Route::post('service', [\App\Http\Controllers\API\v1\ServiceController::class, 'store']);
-    Route::patch('service/{service}', [\App\Http\Controllers\API\v1\ServiceController::class, 'update']);
+    Route::match(['put', 'patch'] ,'service/{service}', [\App\Http\Controllers\API\v1\ServiceController::class, 'update']);
     Route::delete('service/{service}', [\App\Http\Controllers\API\v1\ServiceController::class, 'destroy']);
 
     Route::post('testimonial', [\App\Http\Controllers\API\v1\TestimonialController::class, 'store']);
-    Route::patch('testimonial/{testimonial}', [\App\Http\Controllers\API\v1\TestimonialController::class, 'update']);
+    Route::match(['put', 'patch'] ,'testimonial/{testimonial}', [\App\Http\Controllers\API\v1\TestimonialController::class, 'update']);
     Route::delete('testimonial/{testimonial}', [\App\Http\Controllers\API\v1\TestimonialController::class, 'destroy']);
 }
 );

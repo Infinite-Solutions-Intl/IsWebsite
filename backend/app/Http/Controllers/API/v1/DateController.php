@@ -18,7 +18,7 @@ class DateController extends Controller
     {
         $dates = Date::all();
 
-        return response()->json($dates);
+        return response()->json(['data' => $dates]);
     }
 
 
@@ -45,7 +45,7 @@ class DateController extends Controller
 
         $date = Date::create($request->all());
 
-        return response()->json(['status' => true, 'date' => $date]);
+        return response()->json(['status' => true, 'data' => $date]);
     }
 
     /**
@@ -56,7 +56,7 @@ class DateController extends Controller
      */
     public function show(Date $date)
     {
-        return response()->json(['status' => true, 'date' => $date]);
+        return response()->json(['status' => true, 'data' => $date]);
     }
 
 
@@ -84,7 +84,7 @@ class DateController extends Controller
 
         $date->update($request->all());
 
-        return response()->json(['status' => true, 'date' => $date]);
+        return response()->json(['status' => true, 'data' => $date]);
     }
 
     /**

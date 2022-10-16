@@ -18,7 +18,7 @@ class PricingController extends Controller
     {
         $pricings = Pricing::all();
 
-        return response()->json($pricings);
+        return response()->json(['data' => $pricings]);
     }
 
 
@@ -45,7 +45,7 @@ class PricingController extends Controller
 
         $pricing = Pricing::create($request->all());
 
-        return response()->json(['status' => true, 'pricing' => $pricing]);
+        return response()->json(['status' => true, 'data' => $pricing]);
     }
 
     /**
@@ -56,7 +56,7 @@ class PricingController extends Controller
      */
     public function show(Pricing $pricing)
     {
-        return response()->json(['status' => true, 'pricing' => $pricing]);
+        return response()->json(['status' => true, 'data' => $pricing]);
     }
 
 
@@ -84,7 +84,7 @@ class PricingController extends Controller
 
         $pricing->update($request->all());
 
-        return response()->json(['status' => true, 'pricing' => $pricing]);
+        return response()->json(['status' => true, 'data' => $pricing]);
     }
 
     /**

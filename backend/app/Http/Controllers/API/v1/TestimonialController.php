@@ -20,7 +20,7 @@ class TestimonialController extends Controller
     {
         $testimonials = Testimonial::all();
 
-        return response()->json($testimonials);
+        return response()->json(['data' => $testimonials]);
     }
 
 
@@ -35,7 +35,7 @@ class TestimonialController extends Controller
         $validator = Validator::make($request->all(),[
             'testimonialtable_id'   => 'integer',
             'testimonialtable_type' => 'string',
-            'author'                 => 'required|string|max:120',
+            'author'                => 'required|string|max:120',
             'content'               => 'required',
             'score'                 => 'integer|max:5'
         ]);
@@ -49,28 +49,30 @@ class TestimonialController extends Controller
             );
         }
 
-        // if ($request->testimonialtable_type == 'App\Models\Service') {
-        //     $service = Service::find($request->testimonialtable_id);
+        if ($request->testimonialtable_type == 'App\Models\Service') 
+        {
+            $service = Service::find($request->testimonialtable_id);
 
-        //     $testimonial = Testimonial::create($request->all());
+            $testimonial = Testimonial::create($request->all());
 
-        //     $service->testimonials()->save($testimonial);
+            $service->testimonials()->save($testimonial);
 
-        //     return response()->json(['status' =>true, 'testimonial' => $testimonial]);
-        // }
-        // else{
-        //     $formation = Formation::find($request->testimonialtable_id);
+            return response()->json(['status' =>true, 'data' => $testimonial]);
+        }
+        else {
 
-        //     $testimonial = Testimonial::create($request->all());
+            $formation = Formation::find($request->testimonialtable_id);
 
-        //     $formation->testimonials()->save($testimonial);
+            $testimonial = Testimonial::create($request->all());
+
+            $formation->testimonials()->save($testimonial);
             
-        //     return response()->json(['status' =>true, 'testimonial' => $testimonial]);
-        // }
+            return response()->json(['status' =>true, 'data' => $testimonial]);
+        }
         
         
-        $testimonial = Testimonial::create($request->all());
-        return response()->json(['status' =>true, 'testimonial' => $testimonial]);
+        // $testimonial = Testimonial::create($request->all());
+        // return response()->json(['status' =>true, 'testimonial' => $testimonial]);
 
     }
 
@@ -82,7 +84,7 @@ class TestimonialController extends Controller
      */
     public function show(Testimonial $testimonial)
     {
-        return response()->json(['status' => true, 'testimonial' => $testimonial]);
+        return response()->json(['status' => true, 'data' => $testimonial]);
     }
 
 
@@ -99,7 +101,7 @@ class TestimonialController extends Controller
         $validator = Validator::make($request->all(),[
             'testimonialtable_id'   => 'integer',
             'testimonialtable_type' => 'string',
-            'author'                 => 'required|string|max:120',
+            'author'                => 'required|string|max:120',
             'content'               => 'required',
             'score'                 => 'integer|max:5'
         ]);
@@ -114,7 +116,7 @@ class TestimonialController extends Controller
 
         $testimonial->update($request->all());
 
-        return response()->json(['status' =>true, 'testimonial' => $testimonial]);
+        return response()->json(['status' =>true, 'data' => $testimonial]);
     }
 
     /**

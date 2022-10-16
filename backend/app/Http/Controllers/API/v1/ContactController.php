@@ -18,7 +18,7 @@ class ContactController extends Controller
     {
         $contacts = Contact::all();
 
-        return response()->json($contacts);
+        return response()->json(['data' => $contacts]);
     }
 
     /**
@@ -48,7 +48,7 @@ class ContactController extends Controller
         } 
 
         $contact = Contact::create($request->all());
-        return response()->json(['status' => true,'contact' => $contact]);
+        return response()->json(['status' => true,'data' => $contact]);
     }
 
     /**
@@ -59,7 +59,7 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        return response()->json(['status' => true,'contact' => $contact]);
+        return response()->json(['status' => true,'data' => $contact]);
     }
 
 
@@ -92,7 +92,7 @@ class ContactController extends Controller
 
         $contact->update($request->all());
 
-        return response()->json(['status'=>true , 'contact'=>$contact]);
+        return response()->json(['status'=>true , 'data'=>$contact]);
     }
 
     /**

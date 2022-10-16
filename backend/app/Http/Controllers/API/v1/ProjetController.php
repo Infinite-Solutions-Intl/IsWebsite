@@ -18,7 +18,7 @@ class ProjetController extends Controller
     {
         $projets = Projet::all();
 
-        return response()->json($projets);
+        return response()->json(['data' => $projets]);
     }
 
     
@@ -36,18 +36,15 @@ class ProjetController extends Controller
             'image'         => ['required', 'mimes:png,jpeg,jpg', 'max:2024'],
             'template'      => 'required|string'
         ]);
-
         $extension = $request->image->extension();
-
+        
         $fileName = $request->title.'.'.$extension;
-
+        
         $path = $request->file('image')->storeAs(
             'asset/images',
             $fileName,
             'public'
         );
-
-        // $path = $request->file('image')->store('public/asset/images');
 
         if ($validator->fails()) {
             return response()->json([
@@ -64,7 +61,7 @@ class ProjetController extends Controller
             'template'      => $request->template
         ]);
 
-        return response()->json(['status' => true, 'projet' => $projet]);
+        return response()->json(['status' => true, 'data' => $projet]);
     }
 
     /**
@@ -75,7 +72,7 @@ class ProjetController extends Controller
      */
     public function show(Projet $projet)
     {
-        return response()->json(['status' => true, 'projet' => $projet]);
+        return response()->json(['status' => true, 'data' => $projet]);
     }
 
 
@@ -88,15 +85,24 @@ class ProjetController extends Controller
      */
     public function update(Request $request, Projet $projet)
     {
+        return $request->template;
         $validator = Validator::make($request->all(),[
             'title'         =>'required|max:255',
             'description'   => 'required',
             'image'         => ['required', 'mimes:png, jpeg, jpg', 'max:2024'],
             'template'      => 'required|string'
         ]);
+        // $path = $request->file('image')->update('public/asset/images');
         
-        $path = $request->file('image')->store('public/asset/images');
+        $extension = $request->image->extension();
 
+        $fileName = $request->title.'.'.$extension;
+
+        $path = $request->file('image')->storeAs(
+            'asset/images',
+            $fileName,
+            'public'
+        );
 
         if ($validator->fails()) {
             return response()->json([
@@ -106,13 +112,13 @@ class ProjetController extends Controller
             );
         }
 
-        $projet = Projet::update([
+        $projet->update([
             'title'         => $request->title,
             'description'   => $request->description,
             'image'         => $path,
             'template'      => $request->template
         ]);
-        return response()->json(['status' => true, 'projet' => $projet]);
+        return response()->json(['status' => true, 'data' => $projet]);
     }
 
     /**

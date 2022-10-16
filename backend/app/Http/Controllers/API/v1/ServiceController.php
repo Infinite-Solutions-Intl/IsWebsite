@@ -18,7 +18,7 @@ class ServiceController extends Controller
     {
         $services = Service::all();
 
-        return response()->json($services);
+        return response()->json(['data' => $services]);
     }
 
 
@@ -31,8 +31,8 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title'    => 'required|string',
-            'description'     => 'required|string'
+            'title'         => 'required|string',
+            'description'   => 'required|string'
         ]);
 
         if ($validator->fails()) {
@@ -45,7 +45,7 @@ class ServiceController extends Controller
 
         $service = Service::create($request->all());
 
-        return response()->json(['status' => true, 'service' => $service]);
+        return response()->json(['status' => true, 'data' => $service]);
     }
 
     /**
@@ -56,7 +56,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        return response()->json(['status' => true, 'service' => $service]);
+        return response()->json(['status' => true, 'data' => $service]);
     }
 
  
@@ -71,8 +71,8 @@ class ServiceController extends Controller
     public function update(Request $request, Service $service)
     {
         $validator = Validator::make($request->all(), [
-            'title'    => 'required|string',
-            'description'     => 'required|string'
+            'title'         => 'required|string',
+            'description'   => 'required|string'
         ]);
 
         if ($validator->fails()) {
@@ -85,7 +85,7 @@ class ServiceController extends Controller
 
         $service->update($request->all());
 
-        return response()->json(['status' => true, 'service' => $service]);
+        return response()->json(['status' => true, 'data' => $service]);
     }
 
     /**

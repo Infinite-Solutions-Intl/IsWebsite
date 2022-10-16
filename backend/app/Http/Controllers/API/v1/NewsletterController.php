@@ -18,7 +18,7 @@ class NewsletterController extends Controller
     {
         $newsletters = Newsletter::all();
 
-        return response()->json($newsletters);
+        return response()->json(['data' => $newsletters]);
     }
 
 
@@ -46,7 +46,7 @@ class NewsletterController extends Controller
 
         $newsletter = Newsletter::create($request->all());
 
-        return response()->json(['status' => true, 'newsletter' => $newsletter]);
+        return response()->json(['status' => true, 'data' => $newsletter]);
     }
 
     /**
@@ -57,7 +57,7 @@ class NewsletterController extends Controller
      */
     public function show(Newsletter $newsletter)
     {
-        return response()->json(['status' => true, 'newletter' => $newsletter]);
+        return response()->json(['status' => true, 'data' => $newsletter]);
     }
 
 
@@ -90,7 +90,7 @@ class NewsletterController extends Controller
 
         $newsletter->update($request->all());
 
-        return response()->json(['status' => true, 'newsletter' => $newsletter]);
+        return response()->json(['status' => true, 'data' => $newsletter]);
     }
 
     /**

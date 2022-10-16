@@ -18,7 +18,7 @@ class FormationController extends Controller
     {
         $formations = Formation::all();
 
-        return response()->json($formations);
+        return response()->json(['data' => $formations]);
     }
 
 
@@ -44,7 +44,7 @@ class FormationController extends Controller
 
         $formation = Formation::create($request->all());
 
-        return response()->json(['status' => true, 'formation' => $formation]);
+        return response()->json(['status' => true, 'data' => $formation]);
     }
 
     /**
@@ -55,7 +55,7 @@ class FormationController extends Controller
      */
     public function show(Formation $formation)
     {
-        return response()->json(['status' => true, 'formation' => $formation]);
+        return response()->json(['status' => true, 'data' => $formation]);
     }
 
 
@@ -82,7 +82,7 @@ class FormationController extends Controller
 
         $formation->update($request->all());
 
-        return response()->json(['status' => true, 'formation' => $formation]);
+        return response()->json(['status' => true, 'data' => $formation]);
     }
 
     /**

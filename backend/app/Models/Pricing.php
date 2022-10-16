@@ -10,7 +10,7 @@ class Pricing extends Model
 {
     use HasFactory;
     
-
+    protected $guarded =[];
     /**
      * Get the formation that owns the Pricing
      *
