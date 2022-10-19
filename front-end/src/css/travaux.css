@@ -2,7 +2,7 @@
     background-color: #E6F2EE ;
     padding: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     
 }
 .travaux{
@@ -12,8 +12,7 @@
     gap: 10px;
     flex-flow: column wrap;
     gap: 10px;   
-    height: 600px;
-    max-width: 800px;
+    height: 1000px;
 
  
 }
@@ -24,14 +23,21 @@
     padding: 0;
 }
 
+
+.travaux-text{
+    min-height: 250px;
+}
+.travaux-text-mobile{
+    display: none;
+}
 .travaux-text p{
     margin-bottom: 30px;
 }
 .card-travaux{
-display: flex;
-justify-content: center;
-align-items: flex-end;
-    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:400px;
     border-radius: 5px;
 }
 
@@ -41,8 +47,9 @@ align-items: flex-end;
 }
 
 .card-footer{
+    border-radius: border-box;
     display: flex;
-    width: 100% !important;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: 0;
@@ -61,4 +68,79 @@ align-items: flex-end;
     height: 40px;
     background-color: #B2D6CA;
     
+}
+
+@media screen and ( max-width:992px ) {
+    .travaux-container{
+
+        padding: 30px;
+    }
+    .travaux{
+        max-height: 900px;
+    }
+
+    .card-travaux{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .travaux{
+        max-height: 800px;
+    }
+
+    .card-travaux{
+        height: 300px;
+    }  
+
+}
+
+@media screen and (max-width:562px){
+    .travaux-container{
+        display: block;
+        padding-right: 0px;
+    }
+    .travaux{
+        display: flex;
+        flex-flow:row;
+        justify-content: start ;
+        overflow: hidden;
+        align-items: center;
+        height: auto;
+    
+    }
+    
+   .travaux .travaux-text{
+       display: none;
+    }
+
+    .travaux-text-mobile{
+        display: block;
+        margin-right: 30px;
+    }
+    .travaux .card-travaux{
+        display: block;
+        min-width: 250px;
+    }
+
+    .travaux-progress{
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        border-radius: 14px;
+        height: 7px;
+        /* neutral-grey-100 */
+
+        background: #F7F7F7;
+    }
+
+    .travaux-progress span{
+        display: flex;
+        height: 100%;
+        width: 25%;
+        /* neutral-grey-700 */
+        border-radius: 14px;
+        background: #A3A3A3;
+        
+    }
 }

@@ -57,6 +57,9 @@ export default function Services() {
 
                 </div>
             </div>
+                    <div className="service-progress2">
+                    <span className ='progress-1'></span>
+            </div>
         </div>
     </div>
   )

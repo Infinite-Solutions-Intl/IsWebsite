@@ -38,3 +38,29 @@ max-width: 250px;
     list-style-type: none;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width:992px) {
+
+    .footer{
+        padding: 30px;
+    }
+    
+}
+
+@media screen and (max-width:562px) {
+
+    .footer{
+        padding: 30px;
+        justify-content: center;
+    }
+
+    .footer  {
+        
+        text-align: center;
+    }
+    
+    .footer div{
+        max-width: auto;
+        width: 100%;
+        }
+}

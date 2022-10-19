@@ -6,6 +6,7 @@
     background-color: #1B3987;
     flex-wrap: nowrap;
     overflow: hidden;
+    gap: 20px;
     padding: 100px 0 100px 100px;
     justify-content: space-between;
     align-items: top;
@@ -23,8 +24,7 @@
 }  
 
 .heros .slide-text {
-    width: 45%;
-    margin-right: 50px;
+    width: 50%;
     color: #fff;
   
 
@@ -206,9 +206,21 @@
     .heros{
         padding: 100px 0 100px 30px;
     }
+
+    .heros .slide-text {
+        width: 100%;
+      
+    
+    }
+
+    
+    .heros .slide-img{
+        transform: scale(0.9);
+    }
+    
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:572px) {
 
     .heros{
         padding :50px 40px;

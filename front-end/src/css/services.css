@@ -90,10 +90,10 @@
     padding: 0;
     width: 34%;
     height: 300px;
-    background-color: #1B3987;
     background: url('../img/slide1.png') no-repeat;
     border-radius: 5px;
     margin: 0;
+    background-size: cover ;
 
 
 }
@@ -126,6 +126,11 @@
     gap: 30px;
 }
 
+.service-progress2{
+
+    display: none;
+
+}
 @media screen and (max-width:992px) {
     .services{
         padding: 100px 30px;
@@ -153,6 +158,84 @@
     }
 
     .content{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 0px;
+        height: 300px;
+        border-radius: 5px;
+        margin: 0;
+        padding: 0;
+        background-color: var(--primary-blue-400);
 
     }
+
+    
+    .content  .slide-image {
+        width: 100%;
+        height: 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+       }
+
+    .content   .slide-text{
+        box-sizing: border-box;
+        padding-left:15px;
+        width: 100%;
+        height: 30%;
+        overflow: hidden;
+    }
+
+    .content .slide-text h2{
+        margin: 0;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        text-transform: capitalize;
+
+        /* neutral-grey-550 */
+
+        color: #FDFDFD;
+
+    }
+
+    .content .slide-text p{
+        margin: 0;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        
+        /* primary-blue-200 */
+        
+        color: #96A4C8;
+
+    }
+    .service-progress , .services-name , .navigation , .service-icons{
+        display: none;
+    }
+
+    .service-progress2{
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        border-radius: 14px;
+        height: 7px;
+        /* neutral-grey-100 */
+
+        background: #F7F7F7;
+    }
+
+    .service-progress2 span{
+        display: flex;
+        height: 100%;
+        width: 25%;
+        /* neutral-grey-700 */
+        border-radius: 14px;
+        background: #A3A3A3;
+    }
+
 }

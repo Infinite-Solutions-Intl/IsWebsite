@@ -43,11 +43,12 @@
 
     .navbar{
         padding: 10px 40px;
+       
     }
 
     .navbar .navlink {
         display: flex;
-        width: 100%;
+        width: 0%;
         height: 100vh;
         position: absolute;
         top: 0;
@@ -59,6 +60,8 @@
         align-items: center;
         transition: all 0.5s;
         margin: 0;
+        overflow-x: hidden;
+
         
 
 
@@ -85,6 +88,7 @@
         display :none;
     }
     .navbar .mobile-navlink{
+        width: 100%;
         left:0;
         background:rgba(27, 58, 135, 0.342);
     }

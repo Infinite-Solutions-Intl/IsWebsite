@@ -44,11 +44,14 @@ export default function Formations() {
                 </CardFormation>
 
                 <CardFormation name={'oracle'}
-                                title={'Certification suivie au certificat'}
-                >
+                                title={'Certification suivie au certificat'}>
 
                 </CardFormation>
 
+            </div>
+
+            <div className="travaux-progress">
+              <span className ='progress-1'></span>
             </div>
         </div>
   )

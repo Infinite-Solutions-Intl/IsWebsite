@@ -6,21 +6,20 @@
 
 .formation-text {
     width: 60%;
-    max-width: 700px;
 }
 
 .cards-formation{
     display: flex ;
-    flex-wrap: nowrap;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: start;
 
 }
 .card-formation{
-    max-width: 300px;
-    height: 300px; ;
+    min-width: 250px;
+    height: 400px;
     padding: 5px;
     background-color: #E8EBF3;
-    flex: 1;
     border-radius: 10px;
 
 }
@@ -54,5 +53,54 @@ color: #1B3987;
     border-radius: 15px;
     padding: 5px;
     margin-top: 5px;
+}
+
+@media screen and (max-width:992px) {
+    .formation{
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:562px) {
+    
+    .formation{
+
+     padding-right:0px ;
+    }
+
+    .formation-text{
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    .cards-formation{
+        display: flex ;
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: start;
+        overflow: hidden;
+    
+    }
+
+    .formation-progress{
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        border-radius: 14px;
+        height: 7px;
+        /* neutral-grey-100 */
+
+        background: #F7F7F7;
+    }
+
+    .formation-progress span{
+        display: flex;
+        height: 100%;
+        width: 25%;
+        /* neutral-grey-700 */
+        border-radius: 14px;
+        background: #A3A3A3;
+        
+    }
 }
 

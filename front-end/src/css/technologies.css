@@ -73,6 +73,45 @@
     }
 }
 
-@media screen and ( max-width:992px){
+@media screen and ( max-width:572px){
+    .technologies{
+        display: block;
+        position: relative;
+
+    }
     
+    .technos{
+        position: absolute;
+        height: 0;
+        width: 0;
+    }
+
+    .circle-techno{
+       
+        position: absolute;
+    }
+    
+    .logo-techo{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        transform: translate(-50% , -50%);
+
+    }
+
+    .shap{
+        left: 30px;
+        top: 350px;
+    }
+    .xamarin{
+        left: 220px;
+        top: 50px;
+    }
+
+    .js{
+        top: 350px;
+        left: 220px;
+    }
 }

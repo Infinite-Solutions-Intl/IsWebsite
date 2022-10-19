@@ -1,9 +1,9 @@
 import React from 'react'
 
-export  function CircleTechno({src}) {
+export  function CircleTechno({src , name}) {
     return(
-        <div className='circle-techno'>
-            <img src={src}></img>
+        <div className={'circle-techno '+name}>
+            <img src={src} ></img>
         </div>
     )
 }
@@ -17,10 +17,10 @@ export default function Technologies() {
         </div>
 
         <div className='technos'>
-            <CircleTechno src={'shap.png'}></CircleTechno>
-            <CircleTechno src={'js.png'}></CircleTechno>
-            <CircleTechno src={'react.png'}></CircleTechno>
-            <CircleTechno src={'xam.png'}></CircleTechno>
+            <CircleTechno src={'shap.png'} name={'shap'}></CircleTechno>
+            <CircleTechno src={'js.png'} name ={'js'}></CircleTechno>
+            <CircleTechno src={'react.png'} name={'react'}></CircleTechno>
+            <CircleTechno src={'xam.png'} name={'xamarin'}></CircleTechno>
         </div>
     </div>
   )

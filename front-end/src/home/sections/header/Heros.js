@@ -109,14 +109,14 @@ export default function Heros() {
       <>
     <div className="heros">
         <div className="slide-text">
-            <h1  className="title "> 1 Nous Sommes Une Startup Prometteuse </h1>
+            <h1  className="title "> Nous Sommes Une Startup Prometteuse </h1>
             <p className = "paragraphe">Besoin d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
           
-            <h1 className="title " >2 Nous Sommes Une Startup Prometteuse </h1>
+            <h1 className="title " >Nous Concevons Des Solutions Inoventent pour votre Devellopement</h1>
             <p className = "paragraphe " >Besoincvcnndfhhffdhfhf d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
           
-            <h1 className="title " >3 Nous Sommes Une Startup Prometteuse </h1>
-            <p className = "paragraphe " >Bcvcvcesoin d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
+            <h1 className="title " >Votre Partenaire Ideale Pour Votre Croissance </h1>
+            <p className = "paragraphe " >Besoin d'automatiser ou de digitaliser certaines des activités chronophages de votre entreprise? Qu'il s'agisse de logiciels de bureau, d'applications web, d'application mobiles ou de toute autre technologie à même de correspondre exactement à vos besoins.</p>
            
             <Button text={"Nous contacter"}></Button>
             <Link className='contact-link'>Nos projets</Link>

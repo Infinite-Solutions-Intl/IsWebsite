@@ -18,24 +18,38 @@ export  function CardTravaux({name , title , texte}) {
   )
 }
 
+
+export  function TravauxText({className}) {
+  return (
+    <div className={className}>
+        <h1> Nos récents travaux</h1>
+        <p>
+        Nos clients sont satisfaits de la qualité 
+        de nos services. Ci-dessous les dernières 
+        prestations effectuées et livrées pour nos 
+        clients.
+        </p>
+    </div>
+  )
+}
+
+
 export default function Travaux() {
   return (
     <div className='travaux-container'>
+      <TravauxText className={'travaux-text-mobile'}></TravauxText>
     <div className='travaux'>
-        <div className='travaux-text'>
-            <h3> Nos récents travaux</h3>
-            <p>
-            Nos clients sont satisfaits de la qualité 
-            de nos services. Ci-dessous les dernières 
-            prestations effectuées et livrées pour nos 
-            clients.
-            </p>
-        </div>
+        <TravauxText className={'travaux-text'}></TravauxText>
         <CardTravaux name={'bloo'} title={'bloo Ap'} texte={'bloo app'}></CardTravaux>
         <CardTravaux name={'bloo'} title={'bloo Ap'} texte={'bloo app'}></CardTravaux>
         <CardTravaux name={'bloo'} title={'bloo Ap'} texte={'bloo app'}></CardTravaux>
 
     </div>
+
+    <div className="travaux-progress">
+    <span className ='progress-1'></span>
+    </div>
+
     </div>
   )
 }
