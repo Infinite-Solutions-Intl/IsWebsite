@@ -15,7 +15,7 @@
   --primary-blue-200 : #96A4C8 ;
   --primary-blue-100 : #B8C2Da ;
   --primary-blue-50 : #E8EBF3 ;
-
+  --linear :#023324 ;
   --secondary-green-500:#057A55 ;
   --secondary-green-400:#379577 ;
   --secondary-green-300:#58A68D ;
@@ -33,7 +33,6 @@
   --primary-blue-900 : #0B1839 ;
   --primary-blue-600 : #0F1F4A ;
   --primary-blue-700 : #132860 ;
-
   --primary-green-900 : #023324 ;
   --primary-green-700 : #04573C ;
   --primary-green-800 : #03432F ;
@@ -42,22 +41,22 @@
   --neutral-grey-800:#7F7F7F ;
   --neutral-grey-900:#616161 ;
 
-  --heading-1: 'Poppins' normal  700  45.78px ;
-  --heading-2 : 'poppins'  'normal' 600 36.62px ; 
-  --heading-3 : 'poppins'  'normal' 600 29.3px ; 
-  --body-Copy :'poppins'  'normal' 600 17px;
-  --subtitle-Text : 'poppins'  'normal' 500 15px ;
-  --small--Text-1 :'poppins'  'normal' 500 9.6px ;
-  --small-Textt-2 :'poppins'  'normal' 600 7.68px ;
+  --heading-1: bold  30px 'montserrat';
+  --heading-2 :   'normal' 700 36.62px 'poppins'; 
+  --heading-3 :    600 18px 'poppins'; 
+  --body-Copy : 400 17px 'poppins';
+  --subtitle-Text :   'normal' 500 15px 'poppins';
+  --small--Text-1 :  'normal' 500 9.6px 'poppins';
+  --small-Textt-2 :  'normal' 600 7.68px ;
 
 
-  --heading-1-r: 'Poppins' normal  400  45.78px ;
-  --heading-2-r : 'poppins'  'normal' 400 36.62px ; 
-  --heading-3-r : 'poppins'  'normal' 400 29.3px ; 
-  --body-Copy-r :'poppins'  'normal' 400 17px;
-  --subtitle-Text-r : 'poppins'  'normal' 400 15px ;
-  --small--Text-1-r :'poppins'  'normal' 400 9.6px ;
-  --small-Textt-2-r :'poppins'  'normal' 400 7.68px ;
+  --heading-1-r:  normal  400  45.78px 'poppins';
+  --heading-2-r :   'normal' 400 36.62px 'poppins'; 
+  --heading-3-r :   'normal' 400 29.3px 'poppins'; 
+  --body-Copy-r : 400 17px 'poppins';
+  --subtitle-Text-r :   'normal' 400 15px 'poppins';
+  --small--Text-1-r :  'normal' 400 9.6px 'poppins';
+  --small-Textt-2-r :  'normal' 400 7.68px 'poppins';
   
 }
 
@@ -66,7 +65,7 @@ body {
     padding:0;
     text-decoration: none;
     list-style-type: none;
-    font-family: montserrat;
+    font-family: Montserrat , poppins;
   }
   
   .container{
@@ -76,4 +75,13 @@ body {
 
   .green{
     color:#1D9A58 !important ;
+  }
+
+  @media screen and (width:1344px) {
+    
+    :root{
+
+        --body-copy-r:   'normal' 400 10px;
+    }
+
   }

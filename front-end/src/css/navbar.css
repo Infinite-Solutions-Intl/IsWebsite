@@ -1,3 +1,5 @@
+/* proprietes generales de la navbar */
+
 .navbar{
     position: relative;
     display:flex;
@@ -20,8 +22,8 @@
 
 .navbar ul li a{
     text-decoration: none;
-    color: rgb(75, 75, 75);
-    font-family: 'poppins';
+    color: #454545;
+   font : var(--body-Copy) !important;
 
 }
 
@@ -29,7 +31,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;  
-    gap:25px;
+    gap: 15px;
 }
 
 

@@ -19,10 +19,15 @@
 
 .text-presentation h1{
     margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
 }
 
 .text-presentation p{
     margin: 50px 0;
+    font: var(--body-Copy-r);
 }
 .images-presentation{
     width: 45%;

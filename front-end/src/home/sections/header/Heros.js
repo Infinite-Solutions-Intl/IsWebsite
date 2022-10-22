@@ -11,10 +11,10 @@ export default function Heros() {
         useEffect(()=>{
             const  timer=setInterval(()=>{
                 
-                if (config == 1) {
+                if (config === 1) {
                     setConfig(2)
                     
-                } else if(config == 2) {
+                } else if(config === 2) {
                     setConfig(3)
                     
                 }
@@ -38,7 +38,7 @@ export default function Heros() {
             const images = document.querySelector('.slide-img')
             const progress =document.querySelector('.slide-progress span')
 
-            if(config ==1){
+            if(config ===1){
                 titles[0].classList.remove('slide-text-hidden')
                 titles[2].classList.add('slide-text-hidden')
                 titles[1].classList.add('slide-text-hidden')
@@ -59,7 +59,7 @@ export default function Heros() {
                 
             }
 
-            else if(config ==2){
+            else if(config ===2){
                 titles[1].classList.remove('slide-text-hidden')
                 titles[0].classList.add('slide-text-hidden')
                 titles[2].classList.add('slide-text-hidden')

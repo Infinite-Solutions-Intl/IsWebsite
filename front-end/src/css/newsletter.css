@@ -13,12 +13,14 @@
     
 }
 
-.newsletter .text p{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
+.newsletter .text h3{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
 }
+
+
 
 .newsletter .input-bloc{
     width: 50%;

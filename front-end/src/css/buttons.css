@@ -4,4 +4,6 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
+
+    font: var(--body-Copy)
 }

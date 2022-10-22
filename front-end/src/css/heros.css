@@ -30,6 +30,14 @@
 
 }
 
+.heros .slide-text h1{
+    font: var(--heading-1);
+}
+
+
+.heros .slide-text p {
+  
+}
 .heros .slide-img{
     display:flex;
     overflow: hidden;
