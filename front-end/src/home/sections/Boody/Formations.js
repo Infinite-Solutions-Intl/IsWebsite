@@ -18,6 +18,9 @@ export  function CardFormation({name , title}) {
 
 export default function Formations() {
   return (
+    <div className='container-formation'>
+
+    
         <div className='formation'>
             <div className='formation-text'>
                 <h1>
@@ -54,5 +57,6 @@ export default function Formations() {
               <span className ='progress-1'></span>
             </div>
         </div>
+     </div>   
   )
 }

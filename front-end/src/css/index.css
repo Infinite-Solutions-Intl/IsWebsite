@@ -57,6 +57,7 @@
   --subtitle-Text-r :   'normal' 400 15px 'poppins';
   --small--Text-1-r :  'normal' 400 9.6px 'poppins';
   --small-Textt-2-r :  'normal' 400 7.68px 'poppins';
+  --max-wdth-container: 
   
 }
 
@@ -70,6 +71,9 @@ body {
   
   .container{
     display: block;
+    max-width: 1728px;
+    margin: auto;
+    
     
   }
 
@@ -85,3 +89,5 @@ body {
     }
 
   }
+
+  

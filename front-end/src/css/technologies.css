@@ -77,6 +77,7 @@
     .technologies{
         display: block;
         position: relative;
+        overflow: hidden;
 
     }
     
@@ -89,6 +90,7 @@
     .circle-techno{
        
         position: absolute;
+        transform: scale(0.75);
     }
     
     .logo-techo{
@@ -106,12 +108,12 @@
         top: 350px;
     }
     .xamarin{
-        left: 220px;
+        left: 200px;
         top: 50px;
     }
 
     .js{
         top: 350px;
-        left: 220px;
+        left: 200px;
     }
 }

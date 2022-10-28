@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Button from '../../../component/buttons'
 import Menu from '../../../component/menu'
+import logo from '../../../assets/img/logo.png'
  
 export default function 
 () {
@@ -22,8 +23,8 @@ export default function
     <div className = 'navbar'>
 
       <div className = 'logo'>
-      <Link to={'home' }>
-        <img src='logo.png'/>
+      <Link to={'/' }>
+        <img src={logo}/>
       </Link>
       </div>
 
@@ -53,7 +54,8 @@ export default function
         </ul>
 
       </div>
-      <Button text ={'Nous contacter'}></Button>
+      <Link to={'/contact'}><Button text ={'Nous contacter'}></Button></Link>
+      
       <Menu clickEvent={toggleMenu}></Menu>
 
 

@@ -13,6 +13,7 @@ export default function Newsletter() {
   }
   
   return (
+    <div className='container-newsletter'>
     <div className='newsletter'>
         <div className='text'>
             <h3> Join our Newsletter</h3>
@@ -25,6 +26,8 @@ export default function Newsletter() {
           </form>
 
         </div>
+    </div>
+
     </div>
   )
 }

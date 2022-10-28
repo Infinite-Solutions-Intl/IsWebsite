@@ -1,10 +1,14 @@
 import React from 'react'
+import logo from '../../../assets/img/logo.png'
 
 export default function Footer() {
   return (
+    <div className='container-footer'>
+    
     <footer className='footer'>
+        
         <div className='footer-presentation'>
-            <img src='logo.png'></img>
+            <img src={logo}></img>
             <p>
             Une solution à votre problème, une expérience pour votre entreprise. Nous construisons le futur pour votre entreprise tout simplement.
             </p>
@@ -42,5 +46,7 @@ export default function Footer() {
                 </ul>
         </div>
     </footer>
+
+    </div>
   )
 }

@@ -1,8 +1,13 @@
 import React from 'react'
 import Button from '../../../component/buttons'
+import i from '../../../assets/img/i.png'
 
 export default function Presentation() {
   return (
+    
+    <div className='container-presentation'>
+
+    
     <div className='presentation'>
         <div className ='text-presentation'>
 
@@ -16,14 +21,12 @@ export default function Presentation() {
         </div>
 
         <div className='images-presentation'>
-            <div className = 'img-presentation1'> </div>
+            <div  className = 'img-presentation1'> </div>
             <div className = 'img-presentation2'> </div>
             <div className = 'img-presentation3'> </div>
         </div>
 
-        <div className='vector1'></div>
-        <div className='vector2'></div>
-
+        <img  src = {i} className='vector1'></img>
         <div className ='substract'>
 
         <svg  width="438" height="524" viewBox="0 0 438 524" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,5 +53,7 @@ export default function Presentation() {
        
 
     </div>
+
+   </div> 
   )
 }

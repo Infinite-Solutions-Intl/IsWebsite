@@ -47,7 +47,7 @@
     height: 90%;
     background-color: bisque;
     border-radius: 5px;
-    background-image: url('../img/presentation1.png');
+    background-image: url('../assets/img/presentation1.png');
     background-size:cover ;
 }
 
@@ -56,7 +56,7 @@
     height: 48%;
     background-color: bisque;
     border-radius: 5px;
-    background-image: url('../img/presentation2.png');
+    background-image: url('../assets/img/presentation2.png');
     background-size:cover ;
 }
 .img-presentation3{
@@ -64,7 +64,7 @@
     height: 48%;
     background-color: bisque;
     border-radius: 5px;
-    background-image: url('../img/presentation3.png');
+    background-image: url('../assets/img/presentation3.png');
     background-size:cover ;
 }
 
@@ -72,28 +72,20 @@
 
 
 .vector1{
+
     position: absolute;
     width: 150px;
     height: 150px;
-    background-color: #1B3987;
-    background-blend-mode: multiply;
     overflow: hidden;
     opacity:0.3 ;
-    left: -75px;
+    width: 110px;
+
+    height: auto;
+    left: 0px;
+    top:300px ;
+  z-index: -1;
 }
 
-.vector2{
-    position: absolute;
-    width: 150px;
-    height: 300px;
-    background-color: #1B3987;
-    background-blend-mode: multiply;
-    overflow: hidden;
-    opacity:0.3 ;
-    left: -75px;
-    bottom: -150px;
- 
-}
 
 .substract{
     margin: 0;

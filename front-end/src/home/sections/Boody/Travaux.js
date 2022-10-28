@@ -1,4 +1,6 @@
 import React from 'react'
+import play from '../../../assets/img/play.svg'
+
 export  function CardTravaux({name , title , texte}) {
   return (
     <div className={'card-travaux '+ name}>
@@ -10,7 +12,7 @@ export  function CardTravaux({name , title , texte}) {
             </div>
 
             <div className='play-btn'>
-                <img src='play.svg'></img>
+                <img src={play}></img>
             </div>
 
         </div>
@@ -36,6 +38,7 @@ export  function TravauxText({className}) {
 
 export default function Travaux() {
   return (
+    
     <div className='travaux-container'>
       <TravauxText className={'travaux-text-mobile'}></TravauxText>
     <div className='travaux'>

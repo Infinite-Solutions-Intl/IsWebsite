@@ -1,8 +1,15 @@
 import React from 'react'
 import CircleIcon from '../../../component/circleIcon'
+import prev from '../../../assets/img/prev.png'
+import next from '../../../assets/img/next.png'
+import ps from '../../../assets/img/ps.png'
+import ai from '../../../assets/img/ai.png'
+import id from '../../../assets/img/id.png'
 
 export default function Services() {
   return (
+
+    <div className='container-services'>
     <div className='services'>
         <h1 className='service-title'>Consulter la varieter de nos services</h1>
 
@@ -22,10 +29,10 @@ export default function Services() {
         <div className='services-slide'>
             <div className='navigation'>
                 <div className='prev'>
-                <img src = "prev.png" ></img>
+                <img src = {prev} alt=''  ></img>
                 </div>
                 <div className='next'>
-                <img src = "next.png" ></img>
+                <img src = {next} ></img>
                 </div>
             </div>
 
@@ -50,9 +57,9 @@ export default function Services() {
                     </p>
 
                     <div className='service-icons'>
-                        <CircleIcon iconLink={'ps.png'}></CircleIcon>
-                        <CircleIcon iconLink={'id.png'}></CircleIcon>
-                        <CircleIcon iconLink={'ai.png'}></CircleIcon>
+                        <CircleIcon iconLink={ps}></CircleIcon>
+                        <CircleIcon iconLink={id}></CircleIcon>
+                        <CircleIcon iconLink={ai}></CircleIcon>
                     </div>
 
                 </div>
@@ -61,6 +68,7 @@ export default function Services() {
                     <span className ='progress-1'></span>
             </div>
         </div>
+    </div>
     </div>
   )
 }
