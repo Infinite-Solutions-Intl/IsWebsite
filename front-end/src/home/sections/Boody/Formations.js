@@ -2,7 +2,7 @@ import React from 'react'
 
 export  function CardFormation({name , title}) {
   return (
-    <div className='card-formation'>
+    <div className='card-formation' >
         <div className={'img-formation '+name}>
 
         </div>
@@ -18,7 +18,7 @@ export  function CardFormation({name , title}) {
 
 export default function Formations() {
   return (
-    <div className='container-formation'>
+    <div className='container-formation' id='formation'>
 
     
         <div className='formation'>

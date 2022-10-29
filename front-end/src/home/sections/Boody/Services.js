@@ -9,7 +9,7 @@ import id from '../../../assets/img/id.png'
 export default function Services() {
   return (
 
-    <div className='container-services'>
+    <div className='container-services' id='services'>
     <div className='services'>
         <h1 className='service-title'>Consulter la varieter de nos services</h1>
 

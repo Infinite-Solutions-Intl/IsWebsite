@@ -15,6 +15,11 @@
   
 }
 
+.navbar .navlink{
+    margin: 0;
+    padding: 0;
+    flex-grow: 0.5;
+}
 .navbar ul li{
     text-decoration: none;
     list-style-type: none;
@@ -28,10 +33,11 @@
 }
 
 .navbar .navlink ul {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;  
-    gap: 10px;
+    gap:2%;
     margin: auto;
     padding: 0;
 }
@@ -42,6 +48,18 @@
     padding: 0;
     width: 69px;
 }
+
+
+@media screen and (max-width:1100px) {
+
+    .navbar{
+        padding-right:30px ;
+       
+    }
+
+
+
+}    
 
 @media screen and (max-width:992px) {
 
@@ -63,7 +81,7 @@
         justify-content: center;
         align-items: center;
         transition: all 0.5s;
-        margin: 0;
+      
         overflow-x: hidden;
 
     }
@@ -102,6 +120,3 @@
         padding: 10px 40px;
     }
 }
-
-
-

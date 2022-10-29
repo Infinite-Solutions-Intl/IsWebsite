@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 import Button from '../../../component/buttons'
 import Menu from '../../../component/menu'
 import logo from '../../../assets/img/logo.png'
@@ -32,23 +33,23 @@ export default function
 
         <ul >
           
-            <li><Link to={''}>Accueil </Link></li>
+            <li><HashLink to={'/'}>Accueil </HashLink></li>
          
           
-            <li><Link to={''}>Formations</Link></li>
+            <li><HashLink to={'/#formation'}>Formations</HashLink> </li>
           
           
-            <li><Link to={''}> Services  </Link></li>
+            <li><HashLink to={'/#services'}> Services  </HashLink></li>
          
           
-            <li><Link to={''}>Nos Realistations </Link></li>
+            <li><HashLink to={'/#realisations'}>Nos Realistations </HashLink></li>
          
 
          
-            <li>  <Link to={''}>Blog</Link></li>
+            <li>  <HashLink to={'/#newsletter'}>NewsLetter</HashLink></li>
           
           
-            <li><Link to={''}>A propos </Link></li>
+            <li><HashLink to={''}>A propos </HashLink></li>
           
 
         </ul>

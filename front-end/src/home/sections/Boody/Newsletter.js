@@ -13,7 +13,7 @@ export default function Newsletter() {
   }
   
   return (
-    <div className='container-newsletter'>
+    <div className='container-newsletter' id='newsletter'>
     <div className='newsletter'>
         <div className='text'>
             <h3> Join our Newsletter</h3>

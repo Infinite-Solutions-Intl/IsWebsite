@@ -2,6 +2,7 @@
   padding: 100px;
     background-color: var(--primary-blue-500);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
 }
@@ -29,14 +30,117 @@
 }
 
 .contact .contact-text .green-square{
-
+    width: 25px;
+    height: 25px;
+    background-color: var(--secondary-green-200);
 }
 
 .contact .infos{
+    margin-top:50px ;
+    margin-bottom: 50px ;
+    
 
 }
 
-.contact .contact-form{
+.contact .infos img{
+    
+    height: 25px;
+    
 
+}
+
+.contact .infos .infoItem{
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    margin: 15px 0;
+
+}
+
+.contact .infos span{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+
+.contact .contact-form {
     width: 59%;
+    background: #FFFFFF;
+    border-radius: 10px;
+
+ 
+
+    
+}
+
+.contact .contact-form form{
+
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-flow: row wrap;
+    gap: 20px;
+
+}
+
+
+.contact .contact-form input{
+    display: block;
+    height: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    box-sizing: content-box !important;
+    background-color: var(--neutral-grey-200);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+}
+
+.contact .contact-form .input-name{
+    
+    flex-basis:100%;
+
+}
+
+.contact .contact-form textarea{
+    flex-basis:100%;
+    background-color: var(--neutral-grey-200);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 10px;
+
+}
+
+@media screen and (max-width:992px) {
+    .contact{
+        padding: 100px  30px ;
+    }
+
+    .contact .contact-form form{
+
+        padding: 20px 20px;
+    
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .contact .contact-text{
+        flex-basis:100% ;
+    }
+
+    .contact .contact-form{
+        flex-basis:100% ;
+    }
+
 }
