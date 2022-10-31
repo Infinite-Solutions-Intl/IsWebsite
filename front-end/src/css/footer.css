@@ -1,3 +1,8 @@
+.container-footer{
+    
+    background-color: #FDFDFD;
+
+}
 .footer{
     padding: 100px;
     background-color: #FDFDFD;
@@ -5,6 +10,8 @@
     flex-wrap:wrap ;
     gap: 10px;
     justify-content: space-between;
+    max-width: 1728px;
+    margin: auto;
 }
 
 .footer div{

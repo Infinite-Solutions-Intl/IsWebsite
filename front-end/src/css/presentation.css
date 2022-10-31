@@ -1,13 +1,20 @@
-.presentation{
+.container-presentation{
+
     background-color: #F5F5F5;
+    z-index: -2;
+    
+
+}
+
+.presentation{
+    max-width: 1728px;
+    margin: auto;
     padding:  100px 100px ;
     display: flex;
     justify-content: space-between;
     align-items: top;
     position: relative;
-    z-index: -2;
-    
-
+   
 
 }
 

@@ -1,24 +1,48 @@
 /* proprietes generales de la navbar */
 
+.navbar-container{
+    background-color: #fff;
+    z-index: 100;
+    transition:0.3s cubic-bezier(0, 1.3, 1, 1) ;
+}
 .navbar{
-    position: relative;
+  
+    width: 100%;
+    
     display:flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    max-width: 1728px;
     margin: 0;
     padding: 10px 100px;
+    margin :auto ;
+}
+@keyframes fixed {
+    0% {
+        opacity: 0;
+        height: 0;
+        overflow-y:hidden;
+    } 
 
-    
-    z-index: 100;
+    100% {
+        opacity: 1;
+        height: auto;
+        overflow-y:hidden;
+    }
 
-  
+
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    animation: fixed 1s;
 }
 
 .navbar .navlink{
-    margin: 0;
+    margin-left:8% ;
     padding: 0;
-    flex-grow: 0.5;
+    flex-grow: 1;
+    z-index: 200;
 }
 .navbar ul li{
     text-decoration: none;
@@ -36,7 +60,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;  
+    justify-content: flex-start;  
     gap:2%;
     margin: auto;
     padding: 0;
@@ -50,8 +74,11 @@
 }
 
 
-@media screen and (max-width:1100px) {
-
+@media screen and (max-width:1200px) {
+    .navbar .navlink{
+        margin-left:0% ;
+       flex-grow: 0.5;
+    }
     .navbar{
         padding-right:30px ;
        

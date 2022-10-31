@@ -1,9 +1,17 @@
+.container-newsletter{
+
+    background-color: var(--neutral-grey-100);
+
+}
+
 .newsletter{
     padding: 100px;
     background-color: var(--neutral-grey-100);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1728px;
+    margin: auto;
 
 
 }

@@ -1,7 +1,13 @@
+.container-formation{
+
+    background-color: #ffffff;
+}
 
 .formation{
     padding: 100px;
-    background-color: #FDFDFD;
+    max-width: 1728px;
+    margin: auto;
+   
 }
 
 .formation-text {

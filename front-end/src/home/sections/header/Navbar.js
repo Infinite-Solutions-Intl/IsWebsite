@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
 import Button from '../../../component/buttons'
@@ -17,11 +17,32 @@ export default function
     const tiret2 = document.querySelector(".tiret2");
     tiret2.classList.toggle("mobile-tiret2")
 
-    console.log('hello')
   }
 
+      useEffect(()=>{
+        const handleScroll = (e)=>{
+          e.preventDefault() ;
+          if(window.scrollY>800){
+            document.querySelector('.navbar-container').classList.add('fixed') ;
+          }
+          else{
+            document.querySelector('.navbar-container').classList.remove('fixed') ;
+          }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+          window.removeEventListener('scroll', handleScroll);    
+        };
+
+      }, []);
+
+
   return (
-    <div className = 'navbar'>
+    <div className = 'navbar-container' >
+
+    <div className = 'navbar  navbar-container'>
 
       <div className = 'logo'>
       <Link to={'/' }>
@@ -33,23 +54,23 @@ export default function
 
         <ul >
           
-            <li><HashLink to={'/'}>Accueil </HashLink></li>
+            <li><HashLink smooth to={'/'}>Accueil </HashLink></li>
          
           
-            <li><HashLink to={'/#formation'}>Formations</HashLink> </li>
+            <li><HashLink smooth to={'/#formation'}>Formations</HashLink> </li>
           
           
-            <li><HashLink to={'/#services'}> Services  </HashLink></li>
+            <li><HashLink smooth to={'/#services'}> Services  </HashLink></li>
          
           
-            <li><HashLink to={'/#realisations'}>Nos Realistations </HashLink></li>
+            <li><HashLink smooth to={'/#realisations'}>Nos Realistations </HashLink></li>
          
 
          
-            <li>  <HashLink to={'/#newsletter'}>NewsLetter</HashLink></li>
+            <li>  <HashLink smooth to={'/#newsletter'}>NewsLetter</HashLink></li>
           
           
-            <li><HashLink to={''}>A propos </HashLink></li>
+            <li><HashLink smooth to={''}>A propos </HashLink></li>
           
 
         </ul>
@@ -60,6 +81,9 @@ export default function
       <Menu clickEvent={toggleMenu}></Menu>
 
 
+    </div>
+
+    
     </div>
   )
 }

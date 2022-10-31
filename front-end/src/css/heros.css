@@ -1,9 +1,21 @@
-.heros{
-    display: flex;
+.heros-container{
+
     background-image: url('../assets/img/heros.png');
     background-size: cover;
     background-blend-mode: multiply;
     background-color: #1B3987;
+    height:90vh;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+    max-height: 716px;
+
+}
+
+.heros{
+    display: flex;
+    max-width: 1728px;
+    margin: auto;
     flex-wrap: nowrap;
     overflow: hidden;
     gap: 20px;
@@ -11,8 +23,7 @@
     justify-content: space-between;
     align-items: top;
 
-
-
+   
    
 
 }
@@ -24,14 +35,22 @@
 }  
 
 .heros .slide-text {
-    width: 50%;
     color: #fff;
-  
+    flex-basis: 500px;
 
 }
 
 .heros .slide-text h1{
-    font: var(--heading-1);
+   
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: normal;
+
+        /* secondary-green-50 */
+
+        color: #E6F2EE;
 }
 
 
@@ -210,10 +229,40 @@
     width: 100% !important;
 }
 
+@media screen and (max-width:1200px) {
+    
+    .heros .slide-text h1{
+   
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+
+
+        /* secondary-green-50 */
+
+        color: #E6F2EE;
+}
+}
+
 @media screen and (max-width:992px){
     .heros{
         padding: 100px 0 100px 30px;
+        
     }
+
+    .heros .slide-text h1{
+   
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: normal;
+
+        /* secondary-green-50 */
+
+        color: #E6F2EE;
+}
 
     .heros .slide-text {
         width: 100%;

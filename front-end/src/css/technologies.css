@@ -1,3 +1,9 @@
+.container-technologies{
+
+    background-color: var(--secondary-green-500);
+
+}
+
 .technologies{
     display: flex;
     align-items: center;
@@ -5,7 +11,9 @@
     box-sizing: border-box;
     padding: 100px;
     height: 500px;
-    background-color: var(--secondary-green-500);
+    max-width: 1728px ;
+    margin: auto;
+   
 }
 
 .logo-techo{

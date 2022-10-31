@@ -3,7 +3,9 @@ import play from '../../../assets/img/play.svg'
 
 export  function CardTravaux({name , title , texte}) {
   return (
-    <div className={'card-travaux '+ name}>
+    <div className={'card-travaux '+ name} data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000" >
         <div className='card-footer'>
             <div className='card-text'>
                 <span>{title}</span>
@@ -39,7 +41,8 @@ export  function TravauxText({className}) {
 export default function Travaux() {
   return (
     
-    <div className='travaux-container' id="realisations">
+    <div className='travaux-container' id="realisations" data-aos="fade-up"
+    data-aos-anchor-placement="center-center">
       <TravauxText className={'travaux-text-mobile'}></TravauxText>
     <div className='travaux'>
         <TravauxText className={'travaux-text'}></TravauxText>

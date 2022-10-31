@@ -1,7 +1,14 @@
-.services{
+.container-services{
     background-color: #E8EBF3;
+
+}
+
+.services{
+   
     padding: 100px 100px;
     z-index: -100;
+    max-width: 1728px;
+    margin:auto ;
 
 }
 
