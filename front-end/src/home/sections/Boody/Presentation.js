@@ -6,22 +6,25 @@ export default function Presentation() {
   return (
     
     <div className='container-presentation'>
-        <div className='presentation' data-aos="fade-down" >
+        <div className='presentation'  >
             <div className ='text-presentation'>
 
-                <h1>Qui Somme Nous</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1100" >Qui Somme Nous</h1>
+                <p data-aos="fade-up-right" data-aos-duration="1000" >
                     Entreprise de prestation de services, de conseil et formations en automatisme et intélligence artificielle etc. Nous avons une equipe de développeurs complémentaires pour vous servir, un menu d'expertise pour vos metiers d'entreprise et vos visions strategiques , nous sommes un ensemble de professionnels des systèmes d'informations.
                 </p>
 
+                <div data-aos="fade-up-right" data-aos-duration="1200"  >
                 <Button text={'Nous Contacter'}></Button>
+                </div>
+                
 
             </div>
 
             <div className='images-presentation'>
-                <div  className = 'img-presentation1'> </div>
-                <div className = 'img-presentation2'> </div>
-                <div className = 'img-presentation3'> </div>
+                <div  className = 'img-presentation1' data-aos="fade-right"  data-aos-once="false" data-aos-duration="1000" > </div>
+                <div className = 'img-presentation2' data-aos="fade-down-left"  data-aos-once="false"  data-aos-duration="1000"> </div>
+                <div className = 'img-presentation3' data-aos="fade-up-left"  data-aos-once="false"  data-aos-duration="1000" > </div>
             </div>
 
             <img  src = {i} className='vector1'></img>

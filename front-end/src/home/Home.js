@@ -1,5 +1,7 @@
 import React from 'react'
 import Header from './sections/header/header'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import '../css/index.css'
 import '../css/navbar.css'
 import '../css/heros.css'
@@ -17,7 +19,11 @@ import Body from './sections/Boody/Body'
 import Footer from './sections/footer/footer'
 
 
+
+
 export default function Home() {
+
+  AOS.init();
   return (
     <div className = 'container'>
         <Header></Header>

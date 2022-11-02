@@ -1,18 +1,21 @@
-import React, { useState , useLayoutEffect, useEffect } from 'react'
+import React, { useState , useLayoutEffect, useEffect ,useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../../../component/buttons'
-import Typed from 'react-typed';
+import Typed from "typed.js";
+import Aos from 'aos';
 
 
 
 export default function Heros() {
 
-
+    const title = useRef(null);
+    let h1 = <h1 data-aos="fade-up"
+    data-aos-duration="300" ref={title}> </h1> ;
 
     let  [config , setConfig]= useState(1);
 
     const titles =[ 'Nous Sommes une Startup Inovente' ,
-                 'Nous Concevons Des Solutions Inoventent pour votre Devellopement' ,
+                 'Nous Concevons Des Solutions Inoventent ' ,
                  'Votre Partenaire Ideale Pour Votre Croissance' ,
                 ]
 
@@ -44,7 +47,7 @@ export default function Heros() {
                 }
 
              
-            } ,2000)
+            } ,7000)
 
             return ()=>{
                 clearInterval(timer)
@@ -68,6 +71,8 @@ export default function Heros() {
                 progress.classList.add('progress-1')
                 progress.classList.remove('progress-2' , 'progress-3')
 
+              h1 =   <h1 data-aos="fade-up" data-aos-duration="4000" ref={title}> </h1> 
+
                 
             }
 
@@ -75,11 +80,14 @@ export default function Heros() {
                
                 setHerotext(texts[1])
 
+
                 images.classList.add('config2')
                 images.classList.remove('config1' , 'config3')
 
                 progress.classList.add('progress-2')
                 progress.classList.remove('progress-1' , 'progress-3')
+                Aos.refreshHard();
+                h1 =   <h1 data-aos="fade-down" data-aos-duration="4000" ref={title}> </h1> 
 
               
             }
@@ -92,37 +100,65 @@ export default function Heros() {
 
                 progress.classList.add('progress-3')
                 progress.classList.remove('progress-1' , 'progress-2')
+                
 
             }
             
        
          } , [config])
          
+
+    
+
+
+         useEffect(() => {
+
+
+           const typed = new Typed(title.current, {
+             strings: [titles[config-1]], 
+             typeSpeed: 50,
+             backSpeed: 50,
+            
+             showCursor: true,
+             cursorChar: ""
+           });
+       
+           // Destropying
+           return () => {
+             typed.destroy();
+             h1=<></>
+             console.log(h1)
+           };
+         }, [config]);
+       
+         
          return (
       <>
-      <div className='heros-container'   >
+      <div className='heros-container'  data-aos="fade-left" data-aos-duration="1000" >
 
             <div className="heros">
-                <div className="slide-text">
+                <div className="slide-text" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="1000" >
 
-                        <h1 id='title'></h1>
+                    {h1}
                    <p className = "paragraphe">{heroText}</p>
-                    <Button text={"Nous contacter"}></Button>
+                   <span  data-aos="fade-right" data-aos-duration="2000" data-aos-delay="3000" > <Button  text={"Nous contacter"}></Button>
+                   
                     <Link className='contact-link'>Nos projets</Link>
+                    </span>
                     <div className="slide-progress">
                     <span className ='progress-1'></span>
                     </div>
             
                 </div>
 
-                <div className="slide-img">
+                <div className="slide-img"  data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000" >
                     <div className="slide-img1 config1-div1"></div>
                     <div className="slide-img2 config1-div2"></div>
                     <div className="slide-img3 config1-div3 "></div>
 
                 </div>
 
-            
+                
 
             </div>
     
