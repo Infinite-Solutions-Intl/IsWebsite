@@ -14,7 +14,7 @@ import  '../css/travaux.css'
 import  '../css/formation.css'
 import '../css/newsletter.css'
 import '../css/footer.css'
-
+import { createTheme } from '@mui/material/styles';
 import Body from './sections/Boody/Body'
 import Footer from './sections/footer/footer'
 
@@ -22,6 +22,10 @@ import Footer from './sections/footer/footer'
 
 
 export default function Home() {
+
+
+
+
 
   AOS.init();
   return (

@@ -1,8 +1,10 @@
-import React, { useState , useLayoutEffect, useEffect ,useRef } from 'react'
-import { Link } from 'react-router-dom'
-import Button from '../../../component/buttons'
+import React, { useState , useLayoutEffect, useEffect ,useRef } from 'react' ;
+
+import { Link } from 'react-router-dom' ;
+import { Button } from '@mui/material';
 import Typed from "typed.js";
 import Aos from 'aos';
+import { createTheme } from '@mui/material/styles';
 
 
 
@@ -132,6 +134,23 @@ export default function Heros() {
          }, [config]);
        
          
+const theme = createTheme({
+    status: {
+      danger: '#e53e3e',
+    },
+    palette: {
+      primary: {
+        main: '#09d1f1',
+        darker: '#053e85',
+      },
+      neutrall: {
+        main: '#64548B',
+        contrastText: '#fff',
+      },
+    },
+  });
+
+         
          return (
       <>
       <div className='heros-container'  data-aos="fade-left" data-aos-duration="1000" >
@@ -141,9 +160,13 @@ export default function Heros() {
 
                     {h1}
                    <p className = "paragraphe">{heroText}</p>
-                   <span  data-aos="fade-right" data-aos-duration="2000" data-aos-delay="3000" > <Button  text={"Nous contacter"}></Button>
+                   <span  data-aos="fade-right" data-aos-duration="2000" data-aos-delay="3000" >
+                    
+                     <Button variant="contained" color="primary" >Nous contacter</Button>
                    
-                    <Link className='contact-link'>Nos projets</Link>
+                    <Link className='contact-link'>
+                       <Button> Nos projets</Button> 
+                    </Link>
                     </span>
                     <div className="slide-progress">
                     <span className ='progress-1'></span>

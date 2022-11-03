@@ -35,6 +35,12 @@
 
 }
 
+.heros .slide-text a {
+    list-style-type: none;
+    text-decoration: none !important;
+    text-underline-position: below;
+}
+
 .heros .slide-text h1{
 
         display: flex;
