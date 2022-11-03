@@ -93,12 +93,14 @@
     margin: 0;
     padding: 0;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    outline: 1;
 }
 
 .prev:hover ,.next:hover {
     margin: 0;
     padding: 0;
     background-color: #1B3987;
+    
 }
 
 .content{
