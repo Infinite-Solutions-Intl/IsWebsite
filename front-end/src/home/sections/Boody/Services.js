@@ -6,7 +6,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
 //icones circulaires et images
@@ -16,11 +16,12 @@ import next from "../../../assets/img/next.png";
 import ps from "../../../assets/img/ps.png";
 import ai from "../../../assets/img/ai.png";
 import id from "../../../assets/img/id.png";
+import slide1 from "../../../assets/img/slide1.png";
 import presentation1 from "../../../assets/img/presentation1.png";
 
 //icons
-import ArrowBackSharpIcon from '@mui/icons-material/ArrowBackSharp';
-import ArrowForwardSharpIcon from '@mui/icons-material/ArrowForwardSharp';
+import ArrowBackSharpIcon from "@mui/icons-material/ArrowBackSharp";
+import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 
 //caroussel
 import { useTheme } from "@mui/material/styles";
@@ -32,7 +33,6 @@ import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
 
 // composant pour la tabulation
 
@@ -77,7 +77,7 @@ export function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%" , height:"auto !important" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
@@ -86,188 +86,25 @@ export function BasicTabs() {
           centered
           variant="scrollable"
           scrollButtons="auto"
+
         >
-          <Tab label="Design Graphique" {...a11yProps(0)} />
+          <Tab label="Design Graphique" {...a11yProps(0)}  />
           <Tab label="Formation" {...a11yProps(1)} />
           <Tab label="Developpement d’application" {...a11yProps(2)} />
           <Tab label="Intelligence artificielle" {...a11yProps(3)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <div className="services-slide">
-          <div className="navigation">
-            <div className="prev">
-              <img src={prev} alt=""></img>
-            </div>
-            <div className="next">
-              <img src={next}></img>
-            </div>
-          </div>
-
-          <div className="content">
-            <div className="slide-image"></div>
-            <div className="slide-text">
-              <h2>Identité visuelle</h2>
-
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-                <br></br>
-              </p>
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-                <br></br>
-              </p>
-
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-              </p>
-
-              <div className="service-icons">
-                <CircleIcon iconLink={ps}></CircleIcon>
-                <CircleIcon iconLink={id}></CircleIcon>
-                <CircleIcon iconLink={ai}></CircleIcon>
-              </div>
-            </div>
-          </div>
-          <div className="service-progress2">
-            <span className="progress-1"></span>
-          </div>
-        </div>
+      <SlideService />
       </TabPanel>
-      <TabPanel value={value} index={1}>
-        <div className="services-slide">
-          <div className="navigation">
-            <div className="prev">
-              <img src={prev} alt=""></img>
-            </div>
-            <div className="next">
-              <img src={next}></img>
-            </div>
-          </div>
-
-          <div className="content">
-            <div className="slide-image"></div>
-            <div className="slide-text">
-              <h2>Identité visuelvcle</h2>
-
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-                <br></br>
-              </p>
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-                <br></br>
-              </p>
-
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-              </p>
-
-              <div className="service-icons">
-                <CircleIcon iconLink={ps}></CircleIcon>
-                <CircleIcon iconLink={id}></CircleIcon>
-                <CircleIcon iconLink={ai}></CircleIcon>
-              </div>
-            </div>
-          </div>
-          <div className="service-progress2">
-            <span className="progress-1"></span>
-          </div>
-        </div>
+      <TabPanel  value={value} index={1}>
+      <SlideService />
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        <div className="services-slide">
-          <div className="navigation">
-            <div className="prev">
-              <img src={prev} alt=""></img>
-            </div>
-            <div className="next">
-              <img src={next}></img>
-            </div>
-          </div>
-
-          <div className="content">
-            <div className="slide-image"></div>
-            <div className="slide-text">
-              <h2>Identité visuelle</h2>
-
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-                <br></br>
-              </p>
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-                <br></br>
-              </p>
-
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-              </p>
-
-              <div className="service-icons">
-                <CircleIcon iconLink={ps}></CircleIcon>
-                <CircleIcon iconLink={id}></CircleIcon>
-                <CircleIcon iconLink={ai}></CircleIcon>
-              </div>
-            </div>
-          </div>
-          <div className="service-progress2">
-            <span className="progress-1"></span>
-          </div>
-        </div>
+      <TabPanel  value={value} index={2}>
+      <SlideService />
       </TabPanel>
-      <TabPanel value={value} index={3}>
-        <div className="services-slide">
-          <div className="navigation">
-            <div className="prev">
-              <img src={prev} alt=""></img>
-            </div>
-            <div className="next">
-              <img src={next}></img>
-            </div>
-          </div>
-
-          <div className="content">
-            <div className="slide-image"></div>
-            <div className="slide-text">
-              <h2>Identité visuelle</h2>
-
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-                <br></br>
-              </p>
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-                <br></br>
-              </p>
-
-              <p>
-                Nous developpons des logiciels de bureau, des applications web
-                et mobiles adaptés aux mesures ...
-              </p>
-
-              <div className="service-icons">
-                <CircleIcon iconLink={ps}></CircleIcon>
-                <CircleIcon iconLink={id}></CircleIcon>
-                <CircleIcon iconLink={ai}></CircleIcon>
-              </div>
-            </div>
-          </div>
-          <div className="service-progress2">
-            <span className="progress-1"></span>
-          </div>
-        </div>
+      <TabPanel  value={value} index={3}>
+      <SlideService />
       </TabPanel>
     </Box>
   );
@@ -294,59 +131,55 @@ const images = [
   },
 ];
 
-export function SwipeableTextMobileStepper() {
-    const NextButton = styled(Button)({
+export function SlideService() {
+  const NextButton = styled(Button)({
+    boxShadow: "none",
+    backgroundColor: "#667AAF",
+    height: "30px",
+    minWidth: "30px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 0,
+    padding: 0,
+    transition: "cubic-bezier(0.075, 0.82, 0.165, 1)",
+    borderRadius: "0",
+    "&:hover": {
+      backgroundColor: "#1B3987",
+      border: "none",
+      boxShadow: "none",
+    },
+    "&:active": {
+      boxShadow: "none",
+      backgroundColor: "#1B3987",
+      border: "none",
+    },
+  });
 
-        boxShadow:'none' ,
-        backgroundColor: '#667AAF',
-        height: '30px',
-        minWidth: '30px' ,
-        display: 'flex'  , 
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: 0,
-        padding: 0,
-        transition: 'cubic-bezier(0.075, 0.82, 0.165, 1)',
-        borderRadius: '0',
-        '&:hover': {
-            backgroundColor: '#1B3987',
-            border:'none' ,
-            boxShadow: 'none',
-          },
-          '&:active': {
-            boxShadow: 'none',
-            backgroundColor: '#1B3987',
-            border : 'none'
-          },
-    
-    }) ;
+  const PrevtButton = styled(Button)({
+    boxShadow: "none",
+    backgroundColor: "#A3A3A3",
+    height: "30px",
+    minWidth: "30px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 0,
+    padding: 0,
+    transition: "cubic-bezier(0.075, 0.82, 0.165, 1)",
+    borderRadius: "0",
+    "&:hover": {
+      backgroundColor: "#1B3987",
+      border: "none",
+      boxShadow: "none",
+    },
+    "&:active": {
+      boxShadow: "none",
+      backgroundColor: "#1B3987",
+      border: "none",
+    },
+  });
 
-    const PrevtButton = styled(Button)({
-
-        boxShadow:'none' ,
-        backgroundColor: '#667AAF',
-        height: '30px',
-        minWidth: '30px' ,
-        display: 'flex'  , 
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: 0,
-        padding: 0,
-        transition: 'cubic-bezier(0.075, 0.82, 0.165, 1)',
-        borderRadius: '0',
-        '&:hover': {
-            backgroundColor: '#1B3987',
-            border:'none' ,
-            boxShadow: 'none',
-          },
-          '&:active': {
-            boxShadow: 'none',
-            backgroundColor: '#1B3987',
-            border : 'none'
-          },
-    
-    }) ;
-    
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
@@ -364,7 +197,7 @@ export function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box>
+    <Box  >
       {/*     <Paper
         square
         elevation={0}
@@ -379,42 +212,23 @@ export function SwipeableTextMobileStepper() {
         <Typography>{images[activeStep].label}</Typography>
       </Paper> */}
 
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        activeStep={activeStep}
-        nextButton={
-          <Button
-            size="small"
-            onClick={handleNext}
-            disabled={activeStep === maxSteps - 1}
-          >
-            Next
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft />
-            ) : (
-              <KeyboardArrowRight />
-            )}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === "rtl" ? (
-              <KeyboardArrowRight />
-            ) : (
-              <KeyboardArrowLeft />
-            )}
-            Back
-          </Button>
-        }
-      />
 
       <div className="navigation">
-        <PrevtButton variant="contained" >
-        <ArrowBackSharpIcon/>
+        <PrevtButton 
+        variant="contained"
+        onClick={handleBack} 
+        disabled={activeStep === 0}
+        
+        >
+          <ArrowBackSharpIcon />
         </PrevtButton>
-        <NextButton variant="contained" size="small" >
-        <ArrowForwardSharpIcon/>
+        <NextButton
+          variant="contained"
+          size="small"
+          onClick={handleNext}
+          disabled={activeStep === maxSteps - 1}
+        >
+          <ArrowForwardSharpIcon />
         </NextButton>
       </div>
       <AutoPlaySwipeableViews
@@ -422,9 +236,14 @@ export function SwipeableTextMobileStepper() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
+        interval ={ 7000}
+        
+        sx={{flexShrink:1}}
+
+        
       >
         {images.map((step, index) => (
-          <div key={step.label}>
+          <div className="slide" key={step.label}  sx={{flexShrink:1}} >
             {Math.abs(activeStep - index) <= 2 ? (
               /*               <Box
              component="img"
@@ -437,10 +256,12 @@ export function SwipeableTextMobileStepper() {
                 src={step.imgPath}
                 alt={step.label} 
               /> */
-              <>
+              
                 <div className="services-slide">
                   <div className="content">
-                    <div className="slide-image"></div>
+                    <div className="slide-image">
+                        <img src={slide1}></img>
+                    </div>
                     <div className="slide-text">
                       <h2>Identité visuelle</h2>
 
@@ -467,11 +288,8 @@ export function SwipeableTextMobileStepper() {
                       </div>
                     </div>
                   </div>
-                  <div className="service-progress2">
-                    <span className="progress-1"></span>
-                  </div>
                 </div>
-              </>
+              
             ) : null}
           </div>
         ))}
@@ -510,7 +328,7 @@ export default function Services() {
         </div> */}
       </div>
 
-      <SwipeableTextMobileStepper />
+   
     </div>
   );
 }

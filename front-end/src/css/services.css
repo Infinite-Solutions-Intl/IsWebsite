@@ -105,28 +105,34 @@
 
 .content{
     display: flex;
-    justify-content: center;
-    gap: 11%;
+    justify-content: space-between;
+    gap: 10%;
    align-items:center ;
 
 }
 
 .content .slide-image{
     padding: 0;
-    width: 34%;
+    flex-basis: 34%;
     max-width: 350px;
-    height: 300px;
+    height: 400px;/* 
     background: url('../assets/img/slide1.png') no-repeat;
-    border-radius: 5px;
-    margin: 0;
+ */    border-radius: 5px;
+    margin: 0 0 0 10%;
     background-size: cover ;
+    border-radius: 5px;
 
+}
 
+.content .slide-image img{
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .content .slide-text{
     padding: 0;
-    width: 34%;
+    flex-basis: 34%;
+    margin: 0 20% 0 0;
 }
 .content .slide-text h2{
     padding-top: 0;
