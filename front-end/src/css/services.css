@@ -3,12 +3,40 @@
 
 }
 
+.react-swipeable-view-container {
+   box-sizing: content-box;
+  min-height: 500px !important;
+   width: 100% !important;
+   
+}
+.MuiTabs-flexContainer{
+    justify-content: space-around;
+}
 .services{
    
     padding: 100px 100px;
     z-index: -100;
     max-width: 1728px;
     margin:auto ;
+
+}
+.MuiTabs-indicator{
+    background-color:#1B3987 !important    ;
+}
+
+.MuiTab-root.Mui-selected {
+    color:var(--primary-blue-600) !important;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600 !important;
+
+}
+
+.MuiButtonBase-root.MuiTab-root{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
 
 }
 
@@ -162,6 +190,42 @@
     display: none;
 
 }
+
+@media screen and ( max-width:1400px) {
+    .content .slide-text{
+        margin: 0;
+        flex-basis:50% ;
+        flex-grow: 1;
+
+    }
+    .content .slide-image{
+       max-width: 300px;
+       height: 300px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .content .slide-image img{
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    .MuiButtonBase-root.MuiTab-root{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+    
+    }
+
+    
+}
+
+@media screen and ( max-width:1200px) {
+    .MuiTabs-flexContainer{
+        justify-content: flex-start;
+    }
+}
 @media screen and (max-width:992px) {
     .services{
         padding: 30px 30px;
@@ -172,11 +236,26 @@
         width: 70%;
     }
 
+    .content{
+        gap: auto;
+    }
+
     .content .slide-text{
-        width: 50%;
+        margin: 0;
+        flex-basis:50% ;
+        flex-grow: 1;
+
     }
     .content .slide-image{
-        width: 40%;
+       max-width: 200px;
+       height: 250px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .content .slide-image img{
+        object-fit: cover;
+        overflow: hidden;
     }
 
     .service-title , .service-description{
@@ -267,7 +346,7 @@
 
     }
     .service-progress , .services-name , .navigation , .service-icons{
-        display: none;
+     
     }
 
     .service-progress2{
