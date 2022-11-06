@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+
 export default function Newsletter() {
 
   const [email , setEmail]=useState('') ;
@@ -27,6 +28,8 @@ export default function Newsletter() {
 
         </div>
     </div>
+
+  
 
     </div>
   )

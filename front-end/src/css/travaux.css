@@ -5,6 +5,11 @@
    
     
 }
+
+.travaux-mobile{
+    display: none;
+}
+
 .travaux{
     box-sizing: content-box !important;
         padding: 100px;
@@ -16,7 +21,7 @@
     gap: 10px;
     flex-flow: column wrap;
     gap: 10px;   
-    height: 1000px;
+    height: 1050px;
 
  
 }
@@ -49,18 +54,27 @@
 .travaux-text p{
     margin-bottom: 30px;
 }
-.card-travaux{
+.travaux .card-travaux{
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    height:400px;
+    height:500px;
     border-radius: 5px;
 }
 
-.bloo{
-   background-image: url('../assets/img/presentation3.png');
-    background-size: cover ;
+.travaux .card-travaux .card-image{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    position: absolute;
+    z-index: -1;
+    
 }
+
 
 .card-footer{
     border-radius: border-box;
@@ -70,9 +84,11 @@
     align-items: center;
     margin: 0;
     padding: 10px;
-    background-color:var(--secondary-green-500) ;
-    height: 70px;
+    background-image: linear-gradient(87.99deg, #023324 10.78%, #033F2C 39.39%, #04573C 99.37%) ;
+    height: 80px;
     color: #fff;
+    align-self: flex-end;
+    
 }
 
 .play-btn{
@@ -80,10 +96,19 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    width: 40px !important;
+    width: 40px ;
     height: 40px;
     background-color: #B2D6CA;
     
+}
+
+
+@media screen and ( max-width:1400px ) {
+    
+
+    .card-travaux{
+        height: 400px;
+    }
 }
 
 @media screen and ( max-width:992px ) {
@@ -93,11 +118,11 @@
     }
     .travaux{
         padding: 30px;
-        max-height: 900px;
+        max-height: 650px;
     }
 
-    .card-travaux{
-        height: 350px;
+    .travaux .card-travaux{
+        height: 300px;
     }
 }
 
@@ -106,62 +131,81 @@
         max-height: 800px;
     }
 
-    .card-travaux{
+    .travaux .card-travaux{
         height: 300px;
     }  
 
 }
 
 @media screen and (max-width:562px){
+
     .travaux-container{
         display: block;
-        padding-right: 0px;
+      
     }
-    .travaux{
-        display: flex;
-        flex-flow:row;
-        justify-content: start ;
-        overflow: hidden;
-        align-items: center;
-        height: auto;
-    
-    }
-    .travaux{
-        padding: 0px;
-        max-height: 900px;
-    }
-    
-   .travaux .travaux-text{
+ 
+   .travaux {
        display: none;
     }
 
     .travaux-text-mobile{
         display: block;
-        margin-right: 30px;
-    }
-    .travaux .card-travaux{
+    } 
+    .travaux-mobile {
         display: block;
-        min-width: 250px;
     }
-
-    .travaux-progress{
-        margin-top: 20px;
+    .travaux-mobile .card-travaux-mobile {
+        box-sizing: content-box !important;
         display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        flex-flow: column wrap;   
+        height: 300px;
+
+    }
+    .travaux-mobile .card-travaux-mobile .card-travaux{
+        
+        position: relative;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
         width: 100%;
-        border-radius: 14px;
-        height: 7px;
-        /* neutral-grey-100 */
-
-        background: #F7F7F7;
     }
 
-    .travaux-progress span{
-        display: flex;
+    .travaux-mobile .card-travaux .card-image{
+        display: block;
         height: 100%;
-        width: 25%;
-        /* neutral-grey-700 */
-        border-radius: 14px;
-        background: #A3A3A3;
+        width: 100%;
+        object-fit: cover;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        position: absolute;
+        z-index: -1;
         
     }
+
+
+}
+
+.react-swipeable-view-container{
+    min-height: auto !important;
+
+}
+
+.css-1ujvf5m-MuiPaper-root-MuiMobileStepper-root{
+    background-color: rgba(2, 51, 36 ,.0) !important; 
+}
+
+.css-1be5mm1-MuiLinearProgress-root-MuiMobileStepper-progress{
+    background-color: #B2D6CA !important;
+}
+
+.css-5xe99f-MuiLinearProgress-bar1{
+    background-color: #04573C !important;
+}
+
+.css-1knaqv7-MuiButtonBase-root-MuiButton-root{
+    color: #033F2C !important;
 }

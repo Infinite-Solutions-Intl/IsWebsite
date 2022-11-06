@@ -143,11 +143,9 @@
     padding: 0;
     flex-basis: 34%;
     max-width: 350px;
-    height: 400px;/* 
-    background: url('../assets/img/slide1.png') no-repeat;
- */    border-radius: 5px;
+    height: 450px;
+   border-radius: 5px;
     margin: 0 0 0 10%;
-    background-size: cover ;
     border-radius: 5px;
 
 }

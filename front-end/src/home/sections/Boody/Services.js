@@ -77,7 +77,7 @@ export function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: "100%" , height:"auto !important" }}>
+    <Box sx={{ width: "100%", height: "auto !important" }}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
@@ -86,25 +86,24 @@ export function BasicTabs() {
           centered
           variant="scrollable"
           scrollButtons="auto"
-
         >
-          <Tab label="Design Graphique" {...a11yProps(0)}  />
+          <Tab label="Design Graphique" {...a11yProps(0)} />
           <Tab label="Formation" {...a11yProps(1)} />
           <Tab label="Developpement d’application" {...a11yProps(2)} />
           <Tab label="Intelligence artificielle" {...a11yProps(3)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-      <SlideService />
+        <SlideService />
       </TabPanel>
-      <TabPanel  value={value} index={1}>
-      <SlideService />
+      <TabPanel value={value} index={1}>
+        <SlideService />
       </TabPanel>
-      <TabPanel  value={value} index={2}>
-      <SlideService />
+      <TabPanel value={value} index={2}>
+        <SlideService />
       </TabPanel>
-      <TabPanel  value={value} index={3}>
-      <SlideService />
+      <TabPanel value={value} index={3}>
+        <SlideService />
       </TabPanel>
     </Box>
   );
@@ -197,28 +196,12 @@ export function SlideService() {
   };
 
   return (
-    <Box  >
-      {/*     <Paper
-        square
-        elevation={0}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          height: 50,
-          pl: 2,
-          bgcolor: 'background.default',
-        }}
-      >
-        <Typography>{images[activeStep].label}</Typography>
-      </Paper> */}
-
-
+    <Box>
       <div className="navigation">
-        <PrevtButton 
-        variant="contained"
-        onClick={handleBack} 
-        disabled={activeStep === 0}
-        
+        <PrevtButton
+          variant="contained"
+          onClick={handleBack}
+          disabled={activeStep === 0}
         >
           <ArrowBackSharpIcon />
         </PrevtButton>
@@ -236,60 +219,44 @@ export function SlideService() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-        interval ={ 7000}
-        
-        sx={{flexShrink:1}}
-
-        
+        interval={7000}
+        sx={{ flexShrink: 1 }}
       >
         {images.map((step, index) => (
-          <div className="slide" key={step.label}  sx={{flexShrink:1}} >
+          <div className="slide" key={step.label} sx={{ flexShrink: 1 }}>
             {Math.abs(activeStep - index) <= 2 ? (
-              /*               <Box
-             component="img"
-                sx={{
-                  height: 255,
-                  display: 'block',
-                  overflow: 'hidden',
-               
-                }}
-                src={step.imgPath}
-                alt={step.label} 
-              /> */
-              
-                <div className="services-slide">
-                  <div className="content">
-                    <div className="slide-image">
-                        <img src={slide1}></img>
-                    </div>
-                    <div className="slide-text">
-                      <h2>Identité visuelle</h2>
+              <div className="services-slide">
+                <div className="content">
+                  <div className="slide-image">
+                    <img src={slide1}></img>
+                  </div>
+                  <div className="slide-text">
+                    <h2>Identité visuelle</h2>
 
-                      <p>
-                        Nous developpons des logiciels de bureau, des
-                        applications web et mobiles adaptés aux mesures ...
-                        <br></br>
-                      </p>
-                      <p>
-                        Nous developpons des logiciels de bureau, des
-                        applications web et mobiles adaptés aux mesures ...
-                        <br></br>
-                      </p>
+                    <p>
+                      Nous developpons des logiciels de bureau, des applications
+                      web et mobiles adaptés aux mesures ...
+                      <br></br>
+                    </p>
+                    <p>
+                      Nous developpons des logiciels de bureau, des applications
+                      web et mobiles adaptés aux mesures ...
+                      <br></br>
+                    </p>
 
-                      <p>
-                        Nous developpons des logiciels de bureau, des
-                        applications web et mobiles adaptés aux mesures ...
-                      </p>
+                    <p>
+                      Nous developpons des logiciels de bureau, des applications
+                      web et mobiles adaptés aux mesures ...
+                    </p>
 
-                      <div className="service-icons">
-                        <CircleIcon iconLink={ps}></CircleIcon>
-                        <CircleIcon iconLink={id}></CircleIcon>
-                        <CircleIcon iconLink={ai}></CircleIcon>
-                      </div>
+                    <div className="service-icons">
+                      <CircleIcon iconLink={ps}></CircleIcon>
+                      <CircleIcon iconLink={id}></CircleIcon>
+                      <CircleIcon iconLink={ai}></CircleIcon>
                     </div>
                   </div>
                 </div>
-              
+              </div>
             ) : null}
           </div>
         ))}
@@ -327,8 +294,6 @@ export default function Services() {
             <span></span>
         </div> */}
       </div>
-
-   
     </div>
   );
 }
