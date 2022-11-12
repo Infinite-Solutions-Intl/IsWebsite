@@ -2,7 +2,7 @@
 
 .navbar-container{
     background-color: #fff;
-    z-index: 100;
+    z-index: 1000;
 
 }
 .navbar{
@@ -21,12 +21,10 @@
     0% {
           height: 0;
         overflow-y:hidden;
+        opacity: .3;
     } 
 
-    50%{
-        height: 33px;
-        overflow-y:hidden;
-    }
+
 
 
     100% {
@@ -40,7 +38,8 @@
 .fixed{
     position: fixed;
     width: 100%;
-    animation: fixed 1s linear;
+    animation: fixed 1s linear reverse ;
+
 }
 
 .navbar .navlink{
@@ -64,8 +63,10 @@
 .navbar .navlink ul {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;  
+    align-items: center;
+    text-align: center;
     gap:2%;
     margin: auto;
     padding: 0;
@@ -108,12 +109,10 @@
         top: 0;
         left:100%;
         background-color: rgba(255, 255, 255, 0.486);
-        
         backdrop-filter: blur(10px);
         justify-content: center;
         align-items: center;
         transition: all 0.5s;
-      
         overflow-x: hidden;
 
     }
@@ -121,7 +120,7 @@
     .navbar .navlink ul {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;  
         align-items: center;
         gap:25px;
@@ -135,7 +134,7 @@
 
     }
 
-    .navbar .button-component{
+    .navbar .MuiButton-root{
         display :none;
     }
     .navbar .mobile-navlink{

@@ -61,7 +61,7 @@
     background-color: #E8EBF3;
     display:block;
     height: 85%;
-    width: 70%;
+    flex: 2;
     border-radius: 5px;
     box-sizing: border-box !important;
     padding: 5px;
@@ -88,17 +88,17 @@ color: #96A4C8;
 
 
 .newsletter .input-bloc button{
-    width: 30%;
+
     height:85%;
     background-color: var(--primary-blue-400);
     border-radius: 5px;
     border: none;
+    flex: 1;
+    max-width: 150px;
+    min-width: auto !important;
     /* body-copy | bold */
 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
+
     /* identical to box height */
 
 
@@ -106,6 +106,10 @@ color: #96A4C8;
 
 
 
+}
+
+.send-icon{
+    display: none !important;
 }
 
 @media screen and (max-width:992px) {
@@ -117,10 +121,48 @@ color: #96A4C8;
     .newsletter .text {
         width: 45%;
     }
+
 }
 
-@media screen and (max-width:562px) {
+@media screen and (max-width:768px) {
+    .newsletter{
+        padding: 30px;
+        height: auto;
+    }
 
+    .newsletter .text {
+        width: 45%;
+    }
+    
+
+    .send-text{
+        display: none !important;
+    }
+
+    .send-icon{
+        display: inline-flex !important;
+    }
+
+    .newsletter .input-bloc input{
+
+        height: 85%;
+        border-radius: 5px;
+        min-width: 2px !important;
+        flex-basis: 75%;
+    
+    }
+}
+
+
+@media screen and (max-width:562px) {
+    .send-icon{
+        display: none !important;
+    }
+
+    .send-text{
+        display: inline-flex !important;
+    }
+    
     .newsletter{
         display: block;
         justify-content: center;
@@ -169,6 +211,7 @@ color: #96A4C8;
         width: 100%;
         height: 75px;
         border-radius: 0px;
+        max-width: none;
     }
 
     .newsletter .input-bloc input:focus{

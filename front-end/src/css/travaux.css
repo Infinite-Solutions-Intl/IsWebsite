@@ -186,11 +186,22 @@
         
     }
 
+    .react-swipeable-view-container{
+        min-height: 330px !important;
+    }
+.carousel__inner {
+    height: 29rem  !important;
+}
+
+    .carousel__container{
+        height: 400px !important;
+    }
+
 
 }
 
 .react-swipeable-view-container{
-    min-height: auto !important;
+    min-height: none !important;
 
 }
 

@@ -6,7 +6,9 @@
     background-color: #1B3987 ;
     height: 80vh;
     max-height: 716px;
-
+    min-height: 600px;
+    overflow: hidden;
+    
 
 }
 
@@ -17,9 +19,10 @@
     flex-wrap: nowrap;
     overflow: hidden;
     gap: 20px;
-    padding: 100px 0 100px 100px;
+    padding: 200px 0 100px 100px;
     justify-content: flex-start;
     align-items: top;
+    margin-top: auto;
 
 }
 
@@ -84,7 +87,6 @@
 
 
 /* configuration 1 */
-
 .config1 .slide-img1{
 
     min-width: 257px;
@@ -234,7 +236,37 @@
     width: 100% !important;
 }
 
+@media screen and (max-width:1400px) {
+    .heros{
+
+        padding: 100px 0 100px 100px;
+        min-height: 600px;
+
+    
+    }
+    
+    .heros .slide-text h1{
+   
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+
+
+        /* secondary-green-50 */
+
+        color: #E6F2EE;
+}
+}
+
 @media screen and (max-width:1200px) {
+    .heros{
+
+        padding: 100px 0 100px 100px;
+        min-height: 600px;
+
+    
+    }
     
     .heros .slide-text h1{
    
@@ -251,13 +283,17 @@
 }
 
 @media screen and (max-width:992px){
+
+    .heros-container{
+        max-height: 600px;
+    }
     .heros{
         padding: 100px 0 100px 30px;
         
     }
 
     .heros .slide-text h1{
-        height: 100px;
+        height: 150px;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
@@ -284,6 +320,13 @@
 
 @media screen and (max-width:572px) {
 
+    .heros-container{
+        height: 400px;
+    }
+    .heros-container{
+        min-height: 300px;
+    }
+
     .heros{
         padding :50px 40px;
        
@@ -293,7 +336,6 @@
     .heros .slide-text{
         width: 100%;
         margin: 0;
-
         text-align: center;
     }
 
@@ -304,5 +346,21 @@
     .heros .slide-img{
         display: none;
     }
+    .heros .slide-text h1{
+        height: 100px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: normal;
+
+        /* secondary-green-50 */
+
+        color: #E6F2EE;
+}
+.contact-link{
+    color:white;
+    margin-left: 0 ;
+}
     
 }

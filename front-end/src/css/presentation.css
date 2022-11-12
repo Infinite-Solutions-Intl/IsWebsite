@@ -1,7 +1,8 @@
 .container-presentation{
 
     background-color: #F5F5F5;
-    z-index: -2;
+    z-index: -20;
+
     
 
 }
@@ -15,6 +16,7 @@
     align-items: top;
     position: relative;
    
+   
 
 }
 
@@ -22,6 +24,7 @@
     width: 45%;
     margin: 0;
     padding: 0;
+    z-index: 1;
 }
 
 .text-presentation h1{
@@ -32,10 +35,12 @@
     font-size: 50px;
 }
 
+
 .text-presentation p{
     margin: 50px 0;
     font: var(--body-Copy-r);
 }
+
 .images-presentation{
     width: 45%;
     height: 400px;
@@ -45,6 +50,7 @@
     flex-flow: column wrap;
     justify-content: center;
     gap: 4%;
+    z-index: 1;
     
     
 }
@@ -90,7 +96,7 @@
     height: auto;
     left: 0px;
     top:300px ;
-  z-index: -1;
+  z-index: 1;
 }
 
 
@@ -99,15 +105,16 @@
     padding: 0;
     width: 200px;
     position: absolute;
-    top:-150px;
+    top:-145px;
     right: 0;
-    z-index: -1;
+
 }
 
 .substract svg{
     margin: 0;
     padding: 0; 
     width: 100%;
+    z-index: -3;
 }
 
 

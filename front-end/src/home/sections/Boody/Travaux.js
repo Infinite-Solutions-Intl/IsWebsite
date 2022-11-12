@@ -56,66 +56,64 @@ export function SlideTravaux() {
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
-return (
-  <Box>
-     <AutoPlaySwipeableViews
+  return (
+    <Box>
+      <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-        interval ={ 7000}
-        
-        sx={{flexShrink:1}}
-
-        
+        interval={7000}
+        sx={{ flexShrink: 1 }}
       >
         {travaux.map((travail, index) => (
-          <div className="card-travaux-mobile" key={travail.name}  sx={{flexShrink:1}} >
+          <div
+            className="card-travaux-mobile"
+            key={travail.name}
+            sx={{ flexShrink: 1 }}
+          >
             {Math.abs(activeStep - index) <= 2 ? (
-            
-            <CardTravaux
-              name={travail.name}
-              description={travail.description}
-              image={travail.image}
-            >
+              <CardTravaux
+                name={travail.name}
+                description={travail.description}
+                image={travail.image}
+              ></CardTravaux>
+            ) : null}
+          </div>
+        ))}
+      </AutoPlaySwipeableViews>
 
-          </CardTravaux>
-         
-    ) : null}
-    </div>
-    ))}
-    </AutoPlaySwipeableViews>
-
-    <MobileStepper
-      variant="progress"
-      steps={ maxSteps}
-      position="static"
-      activeStep={activeStep}
-      sx={{backgroundColor:"none" }}
-      nextButton={
-        <Button size="small" onClick={handleNext} disabled={activeStep ===  maxSteps - 1}>
-         
-          {theme.direction === 'rtl' ? (
-            <KeyboardArrowLeft  sx={[{color:"#04573C !important" }]}/>
-          ) : (
-            <KeyboardArrowRight />
-          )}
-        </Button>
-      }
-      backButton={
-        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-          {theme.direction === 'rtl' ? (
-            <KeyboardArrowRight />
-          ) : (
-            <KeyboardArrowLeft />
-          )}
-         
-        </Button>
-      }
-    />
-  
+      <MobileStepper
+        variant="progress"
+        steps={maxSteps}
+        position="static"
+        activeStep={activeStep}
+        sx={{ backgroundColor: "none" }}
+        nextButton={
+          <Button
+            size="small"
+            onClick={handleNext}
+            disabled={activeStep === maxSteps - 1}
+          >
+            {theme.direction === "rtl" ? (
+              <KeyboardArrowLeft sx={[{ color: "#04573C !important" }]} />
+            ) : (
+              <KeyboardArrowRight />
+            )}
+          </Button>
+        }
+        backButton={
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            {theme.direction === "rtl" ? (
+              <KeyboardArrowRight />
+            ) : (
+              <KeyboardArrowLeft />
+            )}
+          </Button>
+        }
+      />
     </Box>
-)
+  );
 }
 
 export function CardTravaux({ name, image, description }) {
@@ -144,7 +142,7 @@ export function CardTravaux({ name, image, description }) {
 
 export function TravauxText({ className }) {
   return (
-    <div className={className}>
+    <div className={className} data-aos="fade-right" data-aos-duration="1500">
       <h1> Nos récents travaux</h1>
       <p>
         Nos clients sont satisfaits de la qualité de nos services. Ci-dessous
@@ -155,15 +153,13 @@ export function TravauxText({ className }) {
 }
 
 export default function Travaux() {
-
-
   //slide pour les composants mobiles
 
   return (
     <div className="travaux-container" id="realisations">
       <div className="travaux-mobile">
-      <TravauxText className={"travaux-text-mobile"}></TravauxText>
-      <SlideTravaux> </SlideTravaux>
+        <TravauxText className={"travaux-text-mobile"}></TravauxText>
+        <SlideTravaux> </SlideTravaux>
       </div>
 
       <div className="travaux">
@@ -177,9 +173,7 @@ export default function Travaux() {
             ></CardTravaux>
           );
         })}
-        
       </div>
-
     </div>
   );
 }

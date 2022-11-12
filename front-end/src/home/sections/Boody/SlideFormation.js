@@ -11,87 +11,86 @@ import ArrowForwardSharpIcon from "@mui/icons-material/ArrowForwardSharp";
 
 const slideWidth = 30;
 const NextButton = styled(Button)({
+  boxShadow: "none",
+  backgroundColor: "#667AAF",
+  height: "30px",
+  minWidth: "30px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  margin: 0,
+  padding: 0,
+  transition: "cubic-bezier(0.075, 0.82, 0.165, 1)",
+  borderRadius: "0",
+  "&:hover": {
+    backgroundColor: "#1B3987",
+    border: "none",
     boxShadow: "none",
-    backgroundColor: "#667AAF",
-    height: "30px",
-    minWidth: "30px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: 0,
-    padding: 0,
-    transition: "cubic-bezier(0.075, 0.82, 0.165, 1)",
-    borderRadius: "0",
-    "&:hover": {
-      backgroundColor: "#1B3987",
-      border: "none",
-      boxShadow: "none",
-    },
-    "&:active": {
-      boxShadow: "none",
-      backgroundColor: "#1B3987",
-      border: "none",
-    },
-  });
-
-  const PrevtButton = styled(Button)({
+  },
+  "&:active": {
     boxShadow: "none",
-    backgroundColor: "#A3A3A3",
-    height: "30px",
-    minWidth: "30px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: 0,
-    padding: 0,
-    transition: "cubic-bezier(0.075, 0.82, 0.165, 1)",
-    borderRadius: "0",
-    "&:hover": {
-      backgroundColor: "#1B3987",
-      border: "none",
-      boxShadow: "none",
-    },
-    "&:active": {
-      boxShadow: "none",
-      backgroundColor: "#1B3987",
-      border: "none",
-    },
-  });
+    backgroundColor: "#1B3987",
+    border: "none",
+  },
+});
 
+const PrevtButton = styled(Button)({
+  boxShadow: "none",
+  backgroundColor: "#A3A3A3",
+  height: "30px",
+  minWidth: "30px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  margin: 0,
+  padding: 0,
+  transition: "cubic-bezier(0.075, 0.82, 0.165, 1)",
+  borderRadius: "0",
+  "&:hover": {
+    backgroundColor: "#1B3987",
+    border: "none",
+    boxShadow: "none",
+  },
+  "&:active": {
+    boxShadow: "none",
+    backgroundColor: "#1B3987",
+    border: "none",
+  },
+});
 
 const formations = [
   {
     formation: {
       title: "Laravel",
-      desc: 'juwefhwfhwfwih fewukfhwefh ewkfhwfhw',
+      desc: "juwefhwfhwfwih fewukfhwefh ewkfhwfhw",
       image: formation3,
     },
   },
   {
     formation: {
-        title: "Laravel",
-        desc: 'juwefhwfhwfwih fewukfhwefh ewkfhwfhw',
+      title: "Laravel",
+      desc: "juwefhwfhwfwih fewukfhwefh ewkfhwfhw",
       image: formation2,
     },
   },
   {
     formation: {
-        title: "Laravel",
-        desc: 'juwefhwfhwfwih fewukfhwefh ewkfhwfhw',
+      title: "Laravel",
+      desc: "juwefhwfhwfwih fewukfhwefh ewkfhwfhw",
       image: formation,
     },
   },
   {
     formation: {
-        title: "Laravel",
-        desc: 'juwefhwfhwfwih fewukfhwefh ewkfhwfhw',
+      title: "Laravel",
+      desc: "juwefhwfhwfwih fewukfhwefh ewkfhwfhw",
       image: formation,
     },
   },
   {
     formation: {
-        title: "Laravel",
-        desc: 'juwefhwfhwfwih fewukfhwefh ewkfhwfhw',
+      title: "Laravel",
+      desc: "juwefhwfhwfwih fewukfhwefh ewkfhwfhw",
       image: formation,
     },
   },
@@ -184,7 +183,6 @@ const Carousel = () => {
 
   return (
     <>
-
       <div className="navigation">
         <PrevtButton
           variant="contained"

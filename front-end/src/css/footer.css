@@ -1,73 +1,105 @@
-.container-footer{
-    
-    background-color: #FDFDFD;
-
+.container-footer {
+  background-color: #fdfdfd;
 }
-.footer{
-    padding: 100px;
-    background-color: #FDFDFD;
-    display: flex;
-    flex-wrap:wrap ;
-    gap: 10px;
-    justify-content: space-between;
-    max-width: 1728px;
-    margin: auto;
+.footer {
+  padding: 100px 100px 20px 100px;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  max-width: 1728px;
+  margin: auto;
 }
 
-.footer div{
-max-width: 250px;
+.footer div {
+  max-width: 250px;
 }
 
-.footer div h1{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 29.3px;
-    line-height: 44px;
-    /* identical to box height */
+.footer div h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29.3px;
+  line-height: 44px;
+  /* identical to box height */
 
+  /* green/600 */
 
-    /* green/600 */
-
-    color: #057A55;
+  color: #057a55;
 }
-.footer-presentation img{
-
-    width: 100px;
-
-} 
+.footer-presentation img {
+  width: 100px;
+}
 
 .footer ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .footer ul li {
-    list-style-type: none;
-    margin-bottom: 10px;
+  list-style-type: none;
+  margin-bottom: 10px;
 }
 
-@media screen and (max-width:992px) {
-
-    .footer{
-        padding: 30px;
-    }
-    
+.footer-sociaux {
+  max-width: 1728px;
+  margin: auto;
+  padding: 20px 120px 20px 120px;
 }
 
-@media screen and (max-width:562px) {
+.footer-line {
+  border-bottom: 1.5px solid #e6e6e6;
+  flex-basis: 100%;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
-    .footer{
-        padding: 30px;
-        justify-content: center;
-    }
+.footer-sociaux .sociaux {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
 
-    .footer  {
-        
-        text-align: center;
-    }
+.sociaux-icon {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    padding: 30px 30px 10px 30px;
+  }
+  .footer-sociaux {
+    max-width: 1728px;
+    margin: auto;
+    padding: 20px 40px 20px 40px;
+  }
+}
+
+@media screen and (max-width: 562px) {
+  .footer {
+    padding: 30px;
+    justify-content: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer div {
+    max-width: auto;
+    width: 100%;
+  }
+  .footer-sociaux .sociaux {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+   
     
-    .footer div{
-        max-width: auto;
-        width: 100%;
-        }
+  }
 }

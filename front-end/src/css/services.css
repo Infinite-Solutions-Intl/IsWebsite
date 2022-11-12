@@ -1,370 +1,370 @@
-.container-services{
-    background-color: #E8EBF3;
-
+.container-services {
+  background-color: #e8ebf3;
 }
 
 .react-swipeable-view-container {
-   box-sizing: content-box;
+  box-sizing: content-box;
   min-height: 500px !important;
-   width: 100% !important;
-   
+  width: 100% !important;
 }
-.MuiTabs-flexContainer{
-    justify-content: space-around;
+.MuiTabs-flexContainer {
+  justify-content: space-around;
 }
-.services{
-   
-    padding: 100px 100px;
-    z-index: -100;
-    max-width: 1728px;
-    margin:auto ;
 
+.services {
+  padding: 100px 100px;
+  z-index: -100;
+  max-width: 1728px;
+  margin: auto;
 }
-.MuiTabs-indicator{
-    background-color:#1B3987 !important    ;
+.MuiTabs-indicator {
+  background-color: #1b3987 !important    ;
 }
 
 .MuiTab-root.Mui-selected {
-    color:var(--primary-blue-600) !important;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600 !important;
-
+  color: var(--primary-blue-600) !important;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600 !important;
 }
 
-.MuiButtonBase-root.MuiTab-root{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-
+.MuiButtonBase-root.MuiTab-root {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
 }
 
-.service-title , .service-description{
-    text-align: start;
-    width: 50%;
-    
+.service-title,
+.service-description {
+  text-align: start;
+  width: 50%;
 }
 
-.service-title{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 55px;
+.service-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 55px;
 }
 
-.services-name{
-    margin-top: 50px;
+.services-name {
+  margin-top: 50px;
 }
-.services-name ul{
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 30px;
-    justify-content: space-around ;
-    padding: 0;
-  
+.services-name ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 0;
 }
-.services-name ul li{
-    
-    list-style-type: none ;
-    font-family: 'Poppins';
-    font-style: medium;
-    font-size: 17px;
-    font-weight: 500;
-    text-align: center;
+.services-name ul li {
+  list-style-type: none;
+  font-family: "Poppins";
+  font-style: medium;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
 }
 
-.service-progress{
-    margin: 0;
-    padding: 0;
-    height: 6px;
-    background-color: #fff;
-
+.service-progress {
+  margin: 0;
+  padding: 0;
+  height: 6px;
+  background-color: #fff;
 }
 
-.service-progress span{
-    margin: 0;
-    padding: 0;
-    display: block;
-    width: 25%;
-    height: 100%;
-    background-color: #1B3987;
+.service-progress span {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 25%;
+  height: 100%;
+  background-color: #1b3987;
 }
 
-.navigation{
-    margin-top: 20px;
-    display: flex;
-    justify-content: end;
-    gap: 5px;
+.navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+  gap: 5px;
 }
 
 .prev {
-    background-color: #A3A3A3;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: #a3a3a3;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 
 .next {
-    background-color: #667AAF;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #667aaf;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  outline: 1;
+}
+
+.prev:hover,
+.next:hover {
+  margin: 0;
+  padding: 0;
+  background-color: #1b3987;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+  align-items: center;
+}
+
+.content .slide-image {
+  padding: 0;
+  flex-basis: 34%;
+  max-width: 350px;
+  height: 450px;
+  border-radius: 5px;
+  margin: 0 0 0 10%;
+  border-radius: 5px;
+}
+
+.content .slide-image img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.content .slide-text {
+  padding: 0;
+  flex-basis: 34%;
+  margin: 0 20% 0 0;
+}
+.content .slide-text h2 {
+  padding-top: 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 29.3px;
+  line-height: 36px;
+  text-transform: capitalize;
+  color: #04573c;
+  text-align: start;
+}
+
+.content .slide-text p {
+  color: var(--neutral-grey-900);
+  text-align: start;
+}
+
+.service-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.service-progress2 {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .content .slide-text {
     margin: 0;
-    padding: 0;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    outline: 1;
-}
-
-.prev:hover ,.next:hover {
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+  .content .slide-image {
+    max-width: 300px;
+    height: 300px;
     margin: 0;
-    padding: 0;
-    background-color: #1B3987;
-    
-}
+    overflow: hidden;
+  }
 
-.content{
-    display: flex;
-    justify-content: space-between;
-    gap: 10%;
-   align-items:center ;
-
-}
-
-.content .slide-image{
-    padding: 0;
-    flex-basis: 34%;
-    max-width: 350px;
-    height: 450px;
-   border-radius: 5px;
-    margin: 0 0 0 10%;
-    border-radius: 5px;
-
-}
-
-.content .slide-image img{
+  .content .slide-image img {
     object-fit: cover;
     overflow: hidden;
+  }
+
+  .MuiButtonBase-root.MuiTab-root {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+  }
 }
 
-.content .slide-text{
-    padding: 0;
-    flex-basis: 34%;
-    margin: 0 20% 0 0;
+@media screen and (max-width: 1200px) {
+  .MuiTabs-flexContainer {
+    justify-content: flex-start;
+  }
 }
-.content .slide-text h2{
-    padding-top: 0;
-    font-family: 'Montserrat';
+@media screen and (max-width: 992px) {
+  .services {
+    padding: 30px 30px;
+  }
+  .service-title,
+  .service-description {
+    width: 70%;
+  }
+
+  .content {
+    gap: auto;
+  }
+
+  .content .slide-text {
+    margin: 0;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+  .content .slide-image {
+    max-width: 200px;
+    height: 250px;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .content .slide-image img {
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .service-title,
+  .service-description {
+  }
+
+  .service-title {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
-    font-size: 29.3px;
-    line-height: 36px;
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .service-title,
+  .service-description {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  .content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0px;
+    height: 400px;
+    border-radius: 2px;
+    margin: 0;
+  
+    background-color: var(--primary-blue-400);
+  }
+
+  .content .slide-image {
+    width: 100%;
+
+    flex-basis: 70%;
+    max-width: 1000px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content .slide-image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .content .slide-text {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .content .slide-text h2 {
+    margin: 0;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
     text-transform: capitalize;
-    color: #04573C;
-    text-align: start;
 
-}
+    /* neutral-grey-550 */
 
-.content .slide-text p{
-    color: var(--neutral-grey-900);
-    text-align: start;
-}
+    color: #fdfdfd;
+  }
 
-.service-icons{
+  .content .slide-text p {
+    margin: 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+
+    /* primary-blue-200 */
+
+    color: #96a4c8;
+  }
+
+
+  .service-progress2 {
+    margin-top: 20px;
     display: flex;
-    gap: 30px;
-}
+    width: 100%;
+    border-radius: 14px;
+    height: 7px;
+    /* neutral-grey-100 */
 
-.service-progress2{
+    background: #f7f7f7;
+  }
 
+  .service-progress2 span {
+    display: flex;
+    height: 100%;
+    width: 25%;
+    /* neutral-grey-700 */
+    border-radius: 14px;
+    background: #a3a3a3;
+  }
+
+  .MuiBox-root .css-19kzrtu {
+    padding: 0 !important;
+  }
+
+  .services .navigation {
+    margin-bottom: 15px !important;
+  }
+
+  .MuiTab-root.Mui-selected {
+    color: var(--primary-blue-600) !important;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600 !important;
+  }
+
+  .MuiButtonBase-root.MuiTab-root {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .hidden-mobile{
     display: none;
-
-}
-
-@media screen and ( max-width:1400px) {
-    .content .slide-text{
-        margin: 0;
-        flex-basis:50% ;
-        flex-grow: 1;
-
-    }
-    .content .slide-image{
-       max-width: 300px;
-       height: 300px;
-        margin: 0;
-        overflow: hidden;
-    }
-
-    .content .slide-image img{
-        object-fit: cover;
-        overflow: hidden;
-    }
-
-    .MuiButtonBase-root.MuiTab-root{
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 17px;
-    
-    }
-
-    
-}
-
-@media screen and ( max-width:1200px) {
-    .MuiTabs-flexContainer{
-        justify-content: flex-start;
-    }
-}
-@media screen and (max-width:992px) {
-    .services{
-        padding: 30px 30px;
-    
-    }
-    .service-title , .service-description{
-        
-        width: 70%;
-    }
-
-    .content{
-        gap: auto;
-    }
-
-    .content .slide-text{
-        margin: 0;
-        flex-basis:50% ;
-        flex-grow: 1;
-
-    }
-    .content .slide-image{
-       max-width: 200px;
-       height: 250px;
-        margin: 0;
-        overflow: hidden;
-    }
-
-    .content .slide-image img{
-        object-fit: cover;
-        overflow: hidden;
-    }
-
-    .service-title , .service-description{
-
-        
-    }
-    
-    .service-title{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 40px;
-    }
-    
-}
-
-@media screen and (max-width:572px) {
-    
-    .service-title , .service-description{
-        
-        width: 100%;
-        text-align: center;
-    }
-
-    .service-title{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 35px;
-    }
-
-    .content{
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 0px;
-        height: 300px;
-        border-radius: 5px;
-        margin: 0;
-        padding: 0;
-        background-color: var(--primary-blue-400);
-
-    }
-
-    
-    .content  .slide-image {
-        width: 100%;
-        height: 60%;
-        max-width: 1000px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-       }
-
-    .content   .slide-text{
-        box-sizing: border-box;
-        padding-left:15px;
-        width: 100%;
-        height: 30%;
-        overflow: hidden;
-    }
-
-    .content .slide-text h2{
-        margin: 0;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        text-transform: capitalize;
-
-        /* neutral-grey-550 */
-
-        color: #FDFDFD;
-
-    }
-
-    .content .slide-text p{
-        margin: 0;
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 13px;
-        
-        /* primary-blue-200 */
-        
-        color: #96A4C8;
-
-    }
-    .service-progress , .services-name , .navigation , .service-icons{
-     
-    }
-
-    .service-progress2{
-        margin-top: 20px;
-        display: flex;
-        width: 100%;
-        border-radius: 14px;
-        height: 7px;
-        /* neutral-grey-100 */
-
-        background: #F7F7F7;
-    }
-
-    .service-progress2 span{
-        display: flex;
-        height: 100%;
-        width: 25%;
-        /* neutral-grey-700 */
-        border-radius: 14px;
-        background: #A3A3A3;
-    }
-
+  }
 }

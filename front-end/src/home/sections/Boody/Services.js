@@ -1,4 +1,5 @@
 import React from "react";
+import Typed from "react-typed";
 
 //material
 import PropTypes from "prop-types";
@@ -85,6 +86,7 @@ export function BasicTabs() {
           aria-label="basic tabs example"
           centered
           variant="scrollable"
+          allowScrollButtonsMobile
           scrollButtons="auto"
         >
           <Tab label="Design Graphique" {...a11yProps(0)} />
@@ -227,7 +229,11 @@ export function SlideService() {
             {Math.abs(activeStep - index) <= 2 ? (
               <div className="services-slide">
                 <div className="content">
-                  <div className="slide-image">
+                  <div
+                    className="slide-image"
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                  >
                     <img src={slide1}></img>
                   </div>
                   <div className="slide-text">
@@ -238,13 +244,13 @@ export function SlideService() {
                       web et mobiles adaptés aux mesures ...
                       <br></br>
                     </p>
-                    <p>
+                    <p className="hidden-mobile">
                       Nous developpons des logiciels de bureau, des applications
                       web et mobiles adaptés aux mesures ...
                       <br></br>
                     </p>
 
-                    <p>
+                    <p className="hidden-mobile">
                       Nous developpons des logiciels de bureau, des applications
                       web et mobiles adaptés aux mesures ...
                     </p>
@@ -269,7 +275,13 @@ export default function Services() {
   return (
     <div className="container-services" id="services">
       <div className="services">
-        <h1 className="service-title">Consulter la varieter de nos services</h1>
+        <h1
+          data-aos="zoom-in-right"
+          data-aos-duration="1500"
+          className="service-title"
+        >
+          <Typed strings={["Consulter la varieter de nos services"]}></Typed>
+        </h1>
 
         <p className="service-description">
           Parce que l'atteinte de vos objectifs reste votre priorité, nous vous

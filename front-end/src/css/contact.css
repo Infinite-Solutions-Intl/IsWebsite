@@ -1,15 +1,22 @@
 .contact{
-  padding: 100px;
-    background-color: var(--primary-blue-500);
+
+    padding: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
+    margin: auto;
+    gap: 40px;
+    max-width: 1728px;
+}
+
+.contact-container{
+    background-color: var(--primary-blue-500);
 }
 
 .contact .contact-text{
 
-    width: 34%;
+    flex: 1;
 }
 
 .contact .contact-text h1{
@@ -32,7 +39,7 @@
 .contact .contact-text .green-square{
     width: 25px;
     height: 25px;
-    background-color: var(--secondary-green-200);
+    background-color: var(--secondary-green-400);
 }
 
 .contact .infos{
@@ -68,9 +75,9 @@
 
 
 .contact .contact-form {
-    width: 59%;
+    width: 50%;
     background: #FFFFFF;
-    border-radius: 10px;
+    border-radius: 3px;
 
  
 

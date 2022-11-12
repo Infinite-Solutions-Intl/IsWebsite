@@ -58,6 +58,10 @@
     width: 60%;
 }
 
+.scene{
+    display: flex !important;
+}
+
 @media screen and ( max-width:992px){
     .technologies{
         padding: 30px;

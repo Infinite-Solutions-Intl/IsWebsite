@@ -48,7 +48,9 @@ export default function Formations() {
     <div className="container-formation" id="formation">
       <div className="formation">
         <div className="formation-text">
-          <h1>Nos formations</h1>
+          <h1 data-aos="zoom-in-right" data-aos-duration="1500">
+            Nos formations
+          </h1>
 
           <p>
             Nos clients sont satisfaits de la qualité de nos services.
